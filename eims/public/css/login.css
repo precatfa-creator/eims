@@ -1,0 +1,40 @@
+/* EIMS login branding — مدرسة سهول العلم. Loaded on website pages via
+   web_include_css; selectors are scoped to the auth card (.page-card only
+   appears on login/signup/reset) so nothing bleeds into the SPA or portal. */
+
+body:has(.page-card) {
+	background: linear-gradient(135deg, #147eae 0%, #29abe2 60%, #8fc04e 130%);
+}
+
+.page-card {
+	border-top: 4px solid #1899d1;
+	border-radius: 10px;
+}
+
+/* Replace the generic Frappe logo with the school name. */
+.page-card .page-card-head img,
+.page-card .page-card-head .app-logo,
+.page-card .page-card-head .es-line-icon {
+	display: none;
+}
+
+.page-card .page-card-head::before {
+	content: "مدرسة سهول العلم للتعليم الخاص";
+	display: block;
+	font-weight: 700;
+	color: #1899d1;
+	font-size: 18px;
+	text-align: center;
+	margin-bottom: 6px;
+}
+
+.page-card .btn-primary {
+	background: #1899d1;
+	border-color: #1899d1;
+}
+
+.page-card .btn-primary:hover,
+.page-card .btn-primary:focus {
+	background: #147eae;
+	border-color: #147eae;
+}

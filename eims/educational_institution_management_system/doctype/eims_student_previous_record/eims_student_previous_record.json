@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "creation": "2026-06-27 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "school_name",
+  "stage",
+  "academic_year",
+  "result",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "school_name",
+   "fieldtype": "Data",
+   "label": "Previous School",
+   "in_list_view": 1,
+   "columns": 3
+  },
+  {
+   "fieldname": "stage",
+   "fieldtype": "Link",
+   "label": "Stage",
+   "options": "EIMS Stage",
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "label": "Academic Year",
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Data",
+   "label": "Result / Grade",
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Data",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-27 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Student Previous Record",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "istable": 1,
+ "editable_grid": 1
+}

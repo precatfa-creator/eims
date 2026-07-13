@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "autoname": "format:{stage}-{name_en}",
+ "creation": "2026-06-16 10:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "stage",
+  "name_ar",
+  "name_en"
+ ],
+ "fields": [
+  {
+   "fieldname": "stage",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Stage",
+   "options": "EIMS Stage",
+   "reqd": 1
+  },
+  {
+   "fieldname": "name_ar",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name (AR)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "name_en",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name (EN)",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-16 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Section",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Academic Admin",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  },
+  {
+   "read": 1,
+   "role": "Student"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

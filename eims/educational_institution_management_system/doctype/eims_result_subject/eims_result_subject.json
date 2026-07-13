@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "creation": "2026-06-27 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subject",
+  "subject_name",
+  "subject_type",
+  "max_mark",
+  "min_mark",
+  "term_1_total",
+  "term_2_total",
+  "yearly_total",
+  "make_up_exam",
+  "final_total",
+  "status",
+  "grade"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Subject",
+   "options": "EIMS Subject",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "subject.subject_name",
+   "fieldname": "subject_name",
+   "fieldtype": "Data",
+   "label": "Subject Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "subject.subject_type",
+   "fieldname": "subject_type",
+   "fieldtype": "Data",
+   "label": "Subject Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "max_mark",
+   "fieldtype": "Float",
+   "label": "Max Mark"
+  },
+  {
+   "fieldname": "min_mark",
+   "fieldtype": "Float",
+   "label": "Min Mark"
+  },
+  {
+   "columns": 1,
+   "fieldname": "term_1_total",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Term 1 Total"
+  },
+  {
+   "columns": 1,
+   "fieldname": "term_2_total",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Term 2 Total"
+  },
+  {
+   "columns": 1,
+   "fieldname": "yearly_total",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Yearly Total",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "make_up_exam",
+   "fieldtype": "Float",
+   "label": "Make-up Exam"
+  },
+  {
+   "columns": 1,
+   "fieldname": "final_total",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Final Total",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status"
+  },
+  {
+   "columns": 1,
+   "fieldname": "grade",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Grade",
+   "options": "\nممتاز\nجيد جداً\nجيد\nمقبول\nضعيف"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-06-27 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Result Subject",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,170 @@
+{
+ "actions": [],
+ "creation": "2026-06-27 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "student",
+  "student_name",
+  "academic_year",
+  "action_type",
+  "action_date",
+  "column_break_d1",
+  "guardian_name",
+  "guardian_phone",
+  "status",
+  "section_break_d2",
+  "reason",
+  "summons_date",
+  "suspension_from",
+  "suspension_to",
+  "suspension_days",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "label": "Student",
+   "options": "EIMS Student",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Full Name",
+   "fetch_from": "student.student_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "EIMS Academic Year",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "action_type",
+   "fieldtype": "Select",
+   "label": "Action Type",
+   "options": "استدعاء ولي أمر\nإيقاف عن الدراسة\nإنذار\nملاحظة سلوكية",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "action_date",
+   "fieldtype": "Date",
+   "label": "Action Date",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "column_break_d1",
+   "fieldtype": "Column Break",
+   "label": ""
+  },
+  {
+   "fieldname": "guardian_name",
+   "fieldtype": "Data",
+   "label": "Guardian Name",
+   "fetch_from": "student.guardian_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "guardian_phone",
+   "fieldtype": "Data",
+   "label": "Guardian Phone",
+   "fetch_from": "student.guardian_phone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "مفتوح\nتم إبلاغ ولي الأمر\nمغلق",
+   "default": "مفتوح",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "section_break_d2",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason",
+   "reqd": 1
+  },
+  {
+   "fieldname": "summons_date",
+   "fieldtype": "Date",
+   "label": "Summons Date",
+   "depends_on": "eval:doc.action_type=='استدعاء ولي أمر'"
+  },
+  {
+   "fieldname": "suspension_from",
+   "fieldtype": "Date",
+   "label": "Suspension From",
+   "depends_on": "eval:doc.action_type=='إيقاف عن الدراسة'"
+  },
+  {
+   "fieldname": "suspension_to",
+   "fieldtype": "Date",
+   "label": "Suspension To",
+   "depends_on": "eval:doc.action_type=='إيقاف عن الدراسة'"
+  },
+  {
+   "fieldname": "suspension_days",
+   "fieldtype": "Int",
+   "label": "Suspension Days",
+   "depends_on": "eval:doc.action_type=='إيقاف عن الدراسة'"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-07-11 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Disciplinary Action",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "cancel": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+   ,"submit": 1
+  },
+  {
+   "create": 1,
+   "cancel": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Academic Admin"
+   ,"submit": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "default_view": "List",
+ "autoname": "format:DA-{#####}",
+ "naming_rule": "Expression"
+}

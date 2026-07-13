@@ -1,0 +1,10 @@
+{
+ "doc_type": "EIMS Staff Attendance",
+ "disabled": 0,
+ "doctype": "Print Format",
+ "html": "<div style=\"direction:rtl;text-align:right;font-family:Tahoma\">{% set school = frappe.get_all('EIMS Institution', fields=['institution_name'], limit=1) %}<h2 style=\"text-align:center\">{{ school[0].institution_name if school else '' }}</h2><h3 style=\"text-align:center\">كشف حضور الكادر</h3><p>التاريخ: {{ doc.attendance_date }} | السنة الدراسية: {{ doc.academic_year }}</p><table border=\"1\" cellspacing=\"0\" cellpadding=\"5\" style=\"width:100%;border-collapse:collapse\"><tr><th>الموظف</th><th>الحالة</th><th>الحضور</th><th>الانصراف</th><th>ملاحظات</th></tr>{% for row in doc.rows %}<tr><td>{{ row.staff_name or row.staff }}</td><td>{{ row.status }}</td><td>{{ row.check_in or '' }}</td><td>{{ row.check_out or '' }}</td><td>{{ row.notes or '' }}</td></tr>{% endfor %}</table></div>",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Staff Attendance Sheet",
+ "print_format_type": "Jinja",
+ "standard": "Yes"
+}

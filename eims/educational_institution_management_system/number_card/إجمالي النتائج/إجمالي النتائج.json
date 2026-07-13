@@ -1,0 +1,23 @@
+{
+ "aggregate_function_based_on": "",
+ "color": "Purple",
+ "creation": "2024-04-05 12:00:00",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "EIMS Result",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[]",
+ "function": "Count",
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "إجمالي النتائج",
+ "modified": "2024-04-05 12:00:00",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "إجمالي النتائج",
+ "owner": "Administrator",
+ "parent_document_type": "",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Monthly",
+ "type": "Document Type"
+}

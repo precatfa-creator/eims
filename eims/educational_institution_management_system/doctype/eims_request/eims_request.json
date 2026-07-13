@@ -1,0 +1,168 @@
+{
+ "actions": [],
+ "creation": "2026-06-27 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "subject",
+  "request_type",
+  "raised_by_role",
+  "raised_by_doctype",
+  "raised_by",
+  "raised_by_user",
+  "student",
+  "academic_year",
+  "column_break_r1",
+  "status",
+  "priority",
+  "assigned_to",
+  "section_break_r2",
+  "description",
+  "section_break_r3",
+  "replies"
+ ],
+ "fields": [
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Subject",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "request_type",
+   "fieldtype": "Select",
+   "label": "Request Type",
+   "options": "شكوى\nطلب\nاقتراح\nاستفسار\nملاحظة",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "raised_by_role",
+   "fieldtype": "Select",
+   "label": "Raised By Role",
+   "options": "\nطالب\nولي أمر\nمعلم",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "raised_by_doctype",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "raised_by",
+   "fieldtype": "Dynamic Link",
+   "label": "Raised By",
+   "options": "raised_by_doctype",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "raised_by_user",
+   "fieldtype": "Link",
+   "label": "Requester User",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "label": "Student",
+   "options": "EIMS Student"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Academic Year",
+   "options": "EIMS Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_r1",
+   "fieldtype": "Column Break",
+   "label": ""
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "جديد\nقيد المعالجة\nتم الرد\nمغلق",
+   "default": "جديد",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "منخفض\nمتوسط\nعالي",
+   "default": "متوسط"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_r2",
+   "fieldtype": "Section Break",
+   "label": "Section Break R2"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_r3",
+   "fieldtype": "Section Break",
+   "label": "Section Break R3"
+  },
+  {
+   "fieldname": "replies",
+   "fieldtype": "Table",
+   "label": "Replies",
+   "options": "EIMS Request Reply"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-11 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Academic Admin"
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Teacher"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "default_view": "List",
+ "autoname": "format:REQ-{#####}",
+ "naming_rule": "Expression"
+}

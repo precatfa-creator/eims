@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "autoname": "format:{academic_year}-{stage}-{subject}",
+ "creation": "2026-07-10 21:29:01.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "academic_year",
+  "stage",
+  "subject",
+  "subject_name",
+  "is_active",
+  "start_date",
+  "end_date",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Academic Year",
+   "options": "EIMS Academic Year",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "subject.stage",
+   "fieldname": "stage",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Stage",
+   "options": "EIMS Stage",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Subject",
+   "options": "EIMS Subject",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "subject.subject_name",
+   "fieldname": "subject_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject Name",
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Active"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-10 21:29:01.000000",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Academic Curriculum",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Academic Admin"
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "subject_name"
+}

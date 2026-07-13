@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "creation": "2026-06-27 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "staff",
+  "academic_year",
+  "term",
+  "column_break_t1",
+  "section",
+  "stage",
+  "section_break_t2",
+  "slots"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "staff",
+   "fieldtype": "Link",
+   "label": "Staff",
+   "options": "EIMS Staff",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "EIMS Academic Year",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "term",
+   "fieldtype": "Data",
+   "label": "Term"
+  },
+  {
+   "fieldname": "column_break_t1",
+   "fieldtype": "Column Break",
+   "label": ""
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "EIMS Section"
+  },
+  {
+   "fetch_from": "section.stage",
+   "fieldname": "stage",
+   "fieldtype": "Link",
+   "label": "Stage",
+   "options": "EIMS Stage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_t2",
+   "fieldtype": "Section Break",
+   "label": "Slots"
+  },
+  {
+   "fieldname": "slots",
+   "fieldtype": "Table",
+   "label": "Slots",
+   "options": "EIMS Timetable Slot"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-27 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Timetable",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Academic Admin"
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Teacher"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "default_view": "List",
+ "autoname": "format:TT-{#####}",
+ "naming_rule": "Expression"
+}

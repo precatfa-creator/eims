@@ -1,0 +1,10 @@
+{
+ "doc_type": "EIMS Student Payment",
+ "disabled": 0,
+ "doctype": "Print Format",
+ "html": "<div style=\"direction:rtl;text-align:right;font-family:Tahoma\">{% set school = frappe.get_all('EIMS Institution', fields=['institution_name'], limit=1) %}{% set student = frappe.get_doc('EIMS Student', doc.student) %}<h2 style=\"text-align:center\">{{ school[0].institution_name if school else '' }}</h2><h3 style=\"text-align:center\">إيصال استلام دفعة</h3><p>رقم الإيصال: {{ doc.name }} | تاريخ الدفع: {{ doc.payment_date }}</p><p>اسم الطالب: {{ student.student_name }} | رقم القيد: {{ student.enrollment_number }}</p><p>السنة الدراسية: {{ doc.academic_year }} | رقم التسجيل: {{ doc.enrollment }}</p><h3>المبلغ المستلم: {{ doc.amount_paid }}</h3><br><p>توقيع المستلم: ____________________</p></div>",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Student Payment Receipt",
+ "print_format_type": "Jinja",
+ "standard": "Yes"
+}

@@ -1,0 +1,354 @@
+{
+ "is_standard": 1,
+ "charts": [],
+ "content": "[{\"id\":\"hdr\",\"type\":\"header\",\"data\":{\"text\":\"<b>🎓 Suhool Al-Ilm School Management System</b>\",\"col\":12}},{\"id\":\"sc1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Open School System\",\"col\":3}},{\"id\":\"sc2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Add Student\",\"col\":3}},{\"id\":\"sc3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Assessment\",\"col\":3}},{\"id\":\"sc4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Take Attendance\",\"col\":3}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"c1\",\"type\":\"card\",\"data\":{\"card_name\":\"👥 Students and Enrollment\",\"col\":4}},{\"id\":\"c2\",\"type\":\"card\",\"data\":{\"card_name\":\"📚 Academic Operations\",\"col\":4}},{\"id\":\"c3\",\"type\":\"card\",\"data\":{\"card_name\":\"🧑‍🏫 People and Communication\",\"col\":4}},{\"id\":\"c4\",\"type\":\"card\",\"data\":{\"card_name\":\"🌱 Student Welfare and Activities\",\"col\":4}},{\"id\":\"c5\",\"type\":\"card\",\"data\":{\"card_name\":\"🏛️ Academic Structure\",\"col\":4}},{\"id\":\"c6\",\"type\":\"card\",\"data\":{\"card_name\":\"⚙️ Administration and Finance\",\"col\":4}}]",
+ "creation": "2026-04-04 12:00:00",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "icon": "education",
+ "indicator_color": "orange",
+ "label": "EIMS",
+ "links": [
+  {
+   "doctype": "Workspace Link",
+   "label": "👥 Students and Enrollment",
+   "type": "Card Break"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "student",
+   "label": "Students",
+   "link_to": "EIMS Student",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "add-user",
+   "label": "Enrollments",
+   "link_to": "EIMS Enrollment",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "money-coins-alt",
+   "label": "Student Payments",
+   "link_to": "EIMS Student Payment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "label": "📚 Academic Operations",
+   "type": "Card Break"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "form",
+   "label": "Assessments",
+   "link_to": "EIMS Assessment",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "book-open",
+   "label": "Academic Curriculum",
+   "link_to": "EIMS Academic Curriculum",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "score",
+   "label": "Results",
+   "link_to": "EIMS Result",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "calendar",
+   "label": "Student Attendance",
+   "link_to": "EIMS Student Attendance",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "calendar",
+   "label": "Timetables",
+   "link_to": "EIMS Timetable",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "check",
+   "label": "Daily Accomplishments",
+   "link_to": "EIMS Daily Accomplishment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "label": "🧑‍🏫 People and Communication",
+   "type": "Card Break"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "users",
+   "label": "Staff and Teachers",
+   "link_to": "EIMS Staff",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "assign",
+   "label": "Teacher Subject Assignments",
+   "link_to": "EIMS Teacher Assignment",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "calendar",
+   "label": "Staff Academic Assignments",
+   "link_to": "EIMS Staff Academic Assignment",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "user",
+   "label": "Guardians",
+   "link_to": "EIMS Guardian",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "calendar",
+   "label": "Staff Attendance",
+   "link_to": "EIMS Staff Attendance",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "comment",
+   "label": "Requests",
+   "link_to": "EIMS Request",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "label": "🌱 Student Welfare and Activities",
+   "type": "Card Break"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "warning",
+   "label": "Disciplinary Actions",
+   "link_to": "EIMS Disciplinary Action",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "event",
+   "label": "School Activities",
+   "link_to": "EIMS School Activity",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "label": "🏛️ Academic Structure",
+   "type": "Card Break"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "hierarchy",
+   "label": "Academic Stages",
+   "link_to": "EIMS Stage",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "branch",
+   "label": "Sections",
+   "link_to": "EIMS Section",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "book",
+   "label": "Subjects",
+   "link_to": "EIMS Subject",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "label": "⚙️ Administration and Finance",
+   "type": "Card Break"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "calendar",
+   "label": "Academic Years",
+   "link_to": "EIMS Academic Year",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "money-coins-alt",
+   "label": "Stage Fees",
+   "link_to": "EIMS Stage Fee",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "home",
+   "label": "School Information",
+   "link_to": "EIMS Institution",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "flag",
+   "label": "Nationalities",
+   "link_to": "EIMS Nationality",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "label": "Student Welfare and Records",
+   "type": "Card Break"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "heart",
+   "label": "Student Health Profiles",
+   "link_to": "EIMS Student Health Profile",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "event",
+   "label": "Activity Consents",
+   "link_to": "EIMS Activity Consent",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "label": "School Operations and Correspondence",
+   "type": "Card Break"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "calendar",
+   "label": "Morning Assemblies",
+   "link_to": "EIMS Morning Assembly",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "doctype": "Workspace Link",
+   "icon": "mail",
+   "label": "Official Correspondence",
+   "link_to": "EIMS Official Correspondence",
+   "link_type": "DocType",
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-07-10 21:56:22.000000",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 3.0,
+ "shortcuts": [
+  {
+   "doctype": "Workspace Shortcut",
+   "color": "Orange",
+   "icon": "link",
+   "label": "Open School System",
+   "type": "URL",
+   "url": "/school"
+  },
+  {
+   "doctype": "Workspace Shortcut",
+   "color": "Blue",
+   "doc_view": "New",
+   "icon": "add-user",
+   "label": "Add Student",
+   "link_to": "EIMS Student",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "doctype": "Workspace Shortcut",
+   "color": "Green",
+   "doc_view": "New",
+   "icon": "form",
+   "label": "New Assessment",
+   "link_to": "EIMS Assessment",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "doctype": "Workspace Shortcut",
+   "color": "Yellow",
+   "doc_view": "New",
+   "icon": "calendar",
+   "label": "Take Attendance",
+   "link_to": "EIMS Student Attendance",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "EIMS"
+}

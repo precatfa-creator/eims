@@ -1,0 +1,10 @@
+{
+ "doc_type": "EIMS Assessment",
+ "disabled": 0,
+ "doctype": "Print Format",
+ "html": "<div style=\"direction:rtl;text-align:right;font-family:Tahoma\">{% set school = frappe.get_all('EIMS Institution', fields=['institution_name'], limit=1) %}<h2 style=\"text-align:center\">{{ school[0].institution_name if school else '' }}</h2><h3 style=\"text-align:center\">كشف رصد الدرجات</h3><p>المادة: {{ doc.subject }} | الفترة: {{ doc.term }} | النهاية الكبرى: {{ doc.max_mark }}</p><p>السنة الدراسية: {{ doc.academic_year }} | المرحلة: {{ doc.stage }} | الفصل: {{ doc.section }}</p><table border=\"1\" cellspacing=\"0\" cellpadding=\"5\" style=\"width:100%;border-collapse:collapse\"><tr><th>الطالب</th><th>أعمال السنة</th><th>الامتحان</th><th>المجموع</th><th>ملاحظات</th></tr>{% for row in doc.students %}<tr><td>{{ row.student_name or row.student }}</td><td>{{ row.coursework or '' }}</td><td>{{ row.exam or '' }}</td><td>{{ row.total_score or '' }}</td><td>{{ row.notes or '' }}</td></tr>{% endfor %}</table></div>",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Assessment Grade Sheet",
+ "print_format_type": "Jinja",
+ "standard": "Yes"
+}

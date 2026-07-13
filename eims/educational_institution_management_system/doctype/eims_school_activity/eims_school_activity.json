@@ -1,0 +1,141 @@
+{
+ "actions": [],
+ "creation": "2026-06-27 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "activity_name",
+  "activity_type",
+  "academic_year",
+  "activity_date",
+  "location",
+  "column_break_a1",
+  "supervisor",
+  "status",
+  "requires_consent",
+  "section_break_a2",
+  "description",
+  "section_break_a3",
+  "participants"
+ ],
+ "fields": [
+  {
+   "fieldname": "activity_name",
+   "fieldtype": "Data",
+   "label": "Activity Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "activity_type",
+   "fieldtype": "Select",
+   "label": "Activity Type",
+   "options": "رحلة مدرسية\nمسابقة خارجية\nنشاط داخلي\nزيارة",
+   "default": "رحلة مدرسية",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "EIMS Academic Year",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "activity_date",
+   "fieldtype": "Date",
+   "label": "Activity Date",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "column_break_a1",
+   "fieldtype": "Column Break",
+   "label": ""
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "EIMS Staff"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "مخطط\nمعتمد\nمنفذ\nملغى",
+   "default": "مخطط",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "requires_consent",
+   "fieldtype": "Check",
+   "label": "Requires Consent",
+   "default": "1"
+  },
+  {
+   "fieldname": "section_break_a2",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_a3",
+   "fieldtype": "Section Break",
+   "label": "Participants"
+  },
+  {
+   "fieldname": "participants",
+   "fieldtype": "Table",
+   "label": "Participants",
+   "options": "EIMS Activity Participant"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-06-27 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS School Activity",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "cancel": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+   ,"submit": 1
+  },
+  {
+   "create": 1,
+   "cancel": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Academic Admin"
+   ,"submit": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "default_view": "List",
+ "autoname": "format:ACT-{#####}",
+ "naming_rule": "Expression"
+}

@@ -1,0 +1,141 @@
+{
+ "actions": [],
+ "creation": "2026-06-27 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "guardian_name",
+  "relation",
+  "national_id",
+  "phone",
+  "second_phone",
+  "occupation",
+  "education_level",
+  "workplace",
+  "preferred_contact_method",
+  "column_break_g1",
+  "email",
+  "address",
+  "user_id",
+  "section_break_children",
+  "students"
+ ],
+ "fields": [
+  {
+   "fieldname": "guardian_name",
+   "fieldtype": "Data",
+   "label": "Guardian Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "relation",
+   "fieldtype": "Select",
+   "label": "Relation",
+   "options": "\nأب\nأم\nجد\nعم\nخال\nوصي\nأخرى"
+  },
+  {
+   "fieldname": "national_id",
+   "fieldtype": "Data",
+   "label": "National Id"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "second_phone",
+   "fieldtype": "Data",
+   "label": "Second Phone"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Data",
+   "label": "Occupation"
+  },
+  {
+   "fieldname": "education_level",
+   "fieldtype": "Data",
+   "label": "Education Level"
+  },
+  {
+   "fieldname": "workplace",
+   "fieldtype": "Data",
+   "label": "Workplace"
+  },
+  {
+   "fieldname": "preferred_contact_method",
+   "fieldtype": "Select",
+   "label": "Preferred Contact Method",
+   "options": "Phone\nEmail\nSchool Diary\nOther"
+  },
+  {
+   "fieldname": "column_break_g1",
+   "fieldtype": "Column Break",
+   "label": ""
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "label": "User Id",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_children",
+   "fieldtype": "Section Break",
+   "label": "Children"
+  },
+  {
+   "fieldname": "students",
+   "fieldtype": "Table",
+   "label": "Students",
+   "options": "EIMS Guardian Student"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-27 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Guardian",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Academic Admin"
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "default_view": "List",
+ "autoname": "format:GRD-{#####}",
+ "naming_rule": "Expression"
+}

@@ -1,0 +1,192 @@
+{
+ "actions": [],
+ "autoname": "EIMS-STAFF-.#####",
+ "creation": "2026-06-16 10:00:00",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "image",
+  "name_ar",
+  "name_en",
+  "role",
+  "gender",
+  "title_ar",
+  "title_en",
+  "date_of_birth",
+  "nationality",
+  "national_id",
+  "passport_number",
+  "phone",
+  "email",
+  "address",
+  "qualification",
+  "hire_date",
+  "hired_year",
+  "user_id",
+  "section_break_credentials",
+  "credentials"
+ ],
+ "fields": [
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "name_ar",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Name (AR)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "name_en",
+   "fieldtype": "Data",
+   "label": "Name (EN)"
+  },
+  {
+   "default": "teacher",
+   "fieldname": "role",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Role",
+   "options": "admin\nemployee\nteacher",
+   "reqd": 1
+  },
+  {
+   "default": "male",
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Gender",
+   "options": "male\nfemale"
+  },
+  {
+   "fieldname": "title_ar",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title (AR)"
+  },
+  {
+   "fieldname": "title_en",
+   "fieldtype": "Data",
+   "label": "Title (EN)"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date Of Birth"
+  },
+  {
+   "default": "ليبيا",
+   "fieldname": "nationality",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Nationality",
+   "options": "EIMS Nationality"
+  },
+  {
+   "depends_on": "eval:doc.nationality=='ليبيا'",
+   "fieldname": "national_id",
+   "fieldtype": "Data",
+   "label": "National Id",
+   "unique": 1
+  },
+  {
+   "depends_on": "eval:doc.nationality && doc.nationality!='ليبيا'",
+   "fieldname": "passport_number",
+   "fieldtype": "Data",
+   "label": "Passport Number"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "qualification",
+   "fieldtype": "Data",
+   "label": "Qualification"
+  },
+  {
+   "fieldname": "hire_date",
+   "fieldtype": "Date",
+   "label": "Hire Date"
+  },
+  {
+   "fieldname": "hired_year",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Hired Year",
+   "options": "EIMS Academic Year"
+  },
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "label": "User Id",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_credentials",
+   "fieldtype": "Section Break",
+   "label": "Qualifications and Certificates"
+  },
+  {
+   "fieldname": "credentials",
+   "fieldtype": "Table",
+   "label": "Credentials",
+   "options": "EIMS Staff Credential"
+  }
+ ],
+ "image_field": "image",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-17 03:58:48.239811",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Staff",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Academic Admin",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  }
+ ],
+ "row_format": "Dynamic",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "name_ar",
+ "translated_doctype": 1
+}

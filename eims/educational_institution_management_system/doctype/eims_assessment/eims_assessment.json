@@ -1,0 +1,124 @@
+{
+ "actions": [],
+ "autoname": "format:ASMT-{subject}-{term}-{#####}",
+ "creation": "2026-06-27 12:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "subject",
+  "academic_year",
+  "stage",
+  "section",
+  "column_break_main",
+  "term",
+  "max_mark",
+  "section_break_grades",
+  "students"
+ ],
+ "fields": [
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Subject",
+   "options": "EIMS Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Academic Year",
+   "options": "EIMS Academic Year",
+   "reqd": 1
+  },
+  {
+  "fieldname": "stage",
+  "fieldtype": "Link",
+  "fetch_from": "subject.stage",
+  "in_standard_filter": 1,
+  "label": "Stage",
+  "options": "EIMS Stage",
+  "read_only": 1,
+  "reqd": 1
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Section",
+   "options": "EIMS Section"
+  },
+  {
+   "fieldname": "column_break_main",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "term",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Term",
+   "options": "\nالفترة الأولى\nالفترة الثانية\nالفترة الثالثة\nالفصل الدراسي الأول\nالفصل الدراسي الثاني\nالدور الثاني",
+   "reqd": 1
+  },
+  {
+   "fieldname": "max_mark",
+   "fieldtype": "Float",
+   "label": "Max Mark"
+  },
+  {
+   "fieldname": "section_break_grades",
+   "fieldtype": "Section Break",
+   "label": "Grades"
+  },
+  {
+   "fieldname": "students",
+   "fieldtype": "Table",
+   "label": "Students",
+   "options": "EIMS Assessment Grade"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-06-27 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Assessment",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Academic Admin",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Teacher",
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

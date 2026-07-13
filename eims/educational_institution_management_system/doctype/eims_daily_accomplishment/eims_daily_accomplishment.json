@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "creation": "2026-06-27 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "log_date",
+  "academic_year",
+  "subject",
+  "stage",
+  "section",
+  "teacher",
+  "column_break_da1",
+  "section_break_da2",
+  "accomplishment",
+  "homework",
+  "notes",
+  "section_break_lessons",
+  "lessons"
+ ],
+ "fields": [
+  {
+   "fieldname": "log_date",
+   "fieldtype": "Date",
+   "label": "Log Date",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "EIMS Section",
+   "in_standard_filter": 1
+  },
+  {
+   "fetch_from": "subject.stage",
+   "fieldname": "stage",
+   "fieldtype": "Link",
+   "label": "Stage",
+   "options": "EIMS Stage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "teacher",
+   "fieldtype": "Link",
+   "label": "Teacher",
+   "options": "EIMS Staff",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "column_break_da1",
+   "fieldtype": "Column Break",
+   "label": ""
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "EIMS Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "label": "Subject",
+   "options": "EIMS Subject"
+  },
+  {
+   "fieldname": "section_break_da2",
+   "fieldtype": "Section Break",
+   "label": ""
+  },
+  {
+   "fieldname": "accomplishment",
+   "fieldtype": "Text",
+   "label": "Accomplishment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "homework",
+   "fieldtype": "Small Text",
+   "label": "Homework"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "section_break_lessons",
+   "fieldtype": "Section Break",
+   "label": "Lesson Periods"
+  },
+  {
+   "fieldname": "lessons",
+   "fieldtype": "Table",
+   "label": "Lessons",
+   "options": "EIMS Daily Lesson"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-06-27 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Daily Accomplishment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "cancel": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+   ,"submit": 1
+  },
+  {
+   "create": 1,
+   "cancel": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Academic Admin"
+   ,"submit": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Teacher",
+   "submit": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "default_view": "List",
+ "autoname": "format:DACC-{#####}",
+ "naming_rule": "Expression"
+}

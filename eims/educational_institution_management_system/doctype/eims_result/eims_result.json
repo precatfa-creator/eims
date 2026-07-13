@@ -1,0 +1,180 @@
+{
+ "actions": [],
+ "autoname": "format:RES-{student}-{academic_year}",
+ "creation": "2026-06-27 12:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "student",
+  "academic_year",
+  "stage",
+  "section",
+  "column_break_main",
+  "seat_number",
+  "secret_number",
+  "overall_rank",
+  "status",
+  "section_break_results",
+  "results",
+  "section_break_totals",
+  "grand_total",
+  "max_total",
+  "column_break_totals",
+  "pass_percentage",
+  "overall_grade",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Student",
+   "options": "EIMS Student",
+   "reqd": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Academic Year",
+   "options": "EIMS Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "stage",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Stage",
+   "options": "EIMS Stage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Section",
+   "options": "EIMS Section",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_main",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "للمرحلة الإعدادية",
+   "fieldname": "seat_number",
+   "fieldtype": "Data",
+   "label": "Seat Number"
+  },
+  {
+   "description": "للمرحلة الإعدادية",
+   "fieldname": "secret_number",
+   "fieldtype": "Data",
+   "label": "Secret Number"
+  },
+  {
+   "fieldname": "overall_rank",
+   "fieldtype": "Int",
+   "label": "Overall Rank"
+  },
+  {
+   "default": "مسودة",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "مسودة\nناجح ومنقول\nمرحّل\nدور ثاني\nراسب\nغائب"
+  },
+  {
+   "fieldname": "section_break_results",
+   "fieldtype": "Section Break",
+   "label": "Subject Results"
+  },
+  {
+   "fieldname": "results",
+   "fieldtype": "Table",
+   "label": "Results",
+   "options": "EIMS Result Subject"
+  },
+  {
+   "fieldname": "section_break_totals",
+   "fieldtype": "Section Break",
+   "label": "Totals"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Float",
+   "label": "Grand Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "max_total",
+   "fieldtype": "Float",
+   "label": "Max Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_totals",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pass_percentage",
+   "fieldtype": "Percent",
+   "label": "Pass Percentage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "overall_grade",
+   "fieldtype": "Select",
+   "label": "Overall Grade",
+   "options": "\nممتاز\nجيد جداً\nجيد\nمقبول\nضعيف"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-06-27 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Result",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Academic Admin",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

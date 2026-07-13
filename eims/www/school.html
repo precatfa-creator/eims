@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="theme-color" content="#1899d1" />
+	<title>مدرسة سهول العلم</title>
+	{% for href in app_css %}<link rel="stylesheet" href="{{ href }}" />{% endfor %}
+	<script>window.eims_boot = {{ boot }};</script>
+	<style>html,body{margin:0;padding:0;height:100%;}</style>
+</head>
+<body>
+	<div id="root"></div>
+	{% if app_js %}<script type="module" src="{{ app_js }}"></script>{% endif %}
+</body>
+</html>

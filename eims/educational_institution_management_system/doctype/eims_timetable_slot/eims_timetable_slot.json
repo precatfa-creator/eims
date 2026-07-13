@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "creation": "2026-06-27 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "day",
+  "period",
+  "subject",
+  "stage",
+  "section",
+  "room"
+ ],
+ "fields": [
+  {
+   "fieldname": "day",
+   "fieldtype": "Select",
+   "label": "Day",
+   "options": "\nالأحد\nالاثنين\nالثلاثاء\nالأربعاء\nالخميس",
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Select",
+   "label": "Period",
+   "options": "\nالحصة الأولى\nالحصة الثانية\nالحصة الثالثة\nالحصة الرابعة\nالحصة الخامسة\nالحصة السادسة",
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "label": "Subject",
+   "options": "EIMS Subject",
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fetch_from": "subject.stage",
+   "fieldname": "stage",
+   "fieldtype": "Link",
+   "label": "Stage",
+   "options": "EIMS Stage",
+   "read_only": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "EIMS Section",
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Data",
+   "label": "Room"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-27 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Timetable Slot",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "istable": 1,
+ "editable_grid": 1
+}
