@@ -5,6 +5,10 @@ app_description = "Educational Institution Management System"
 app_email = "precatfa@gmail.com"
 app_license = "mit"
 
+# Public school website. The authenticated school portal remains available at
+# /school for teachers, students, and guardians.
+home_page = "index"
+
 after_install = "eims.install.after_install"
 
 # Bounce logged-out visitors off the desk (/app) to the SPA (/school).
