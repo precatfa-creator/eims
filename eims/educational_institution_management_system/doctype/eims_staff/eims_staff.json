@@ -6,31 +6,54 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "tab_personal",
+  "section_basic_info",
   "image",
   "name_ar",
   "name_en",
-  "role",
-  "gender",
-  "title_ar",
-  "title_en",
+  "column_break_basic",
   "date_of_birth",
+  "gender",
+  "section_nationality",
   "nationality",
+  "column_break_passport",
   "national_id",
   "passport_number",
+  "tab_contact",
+  "section_contact",
   "phone",
   "email",
+  "column_break_address",
   "address",
+  "section_employment",
+  "role",
+  "title_ar",
+  "title_en",
+  "column_break_employment",
   "qualification",
   "hire_date",
   "hired_year",
+  "section_other",
   "user_id",
+  "tab_credentials",
   "section_break_credentials",
   "credentials"
  ],
  "fields": [
   {
+   "fieldname": "tab_personal",
+   "fieldtype": "Tab Break",
+   "label": "Personal Details"
+  },
+  {
+   "fieldname": "section_basic_info",
+   "fieldtype": "Section Break",
+   "label": "Basic Info"
+  },
+  {
    "fieldname": "image",
    "fieldtype": "Attach Image",
+   "hidden": 1,
    "label": "Image"
   },
   {
@@ -47,14 +70,13 @@
    "label": "Name (EN)"
   },
   {
-   "default": "teacher",
-   "fieldname": "role",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Role",
-   "options": "admin\nemployee\nteacher",
-   "reqd": 1
+   "fieldname": "column_break_basic",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date Of Birth"
   },
   {
    "default": "male",
@@ -65,23 +87,12 @@
    "options": "male\nfemale"
   },
   {
-   "fieldname": "title_ar",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Title (AR)"
+   "fieldname": "section_nationality",
+   "fieldtype": "Section Break",
+   "label": "Nationality & ID"
   },
   {
-   "fieldname": "title_en",
-   "fieldtype": "Data",
-   "label": "Title (EN)"
-  },
-  {
-   "fieldname": "date_of_birth",
-   "fieldtype": "Date",
-   "label": "Date Of Birth"
-  },
-  {
-   "default": "ليبيا",
+   "default": "\u0644\u064a\u0628\u064a\u0627",
    "fieldname": "nationality",
    "fieldtype": "Link",
    "in_standard_filter": 1,
@@ -89,17 +100,31 @@
    "options": "EIMS Nationality"
   },
   {
-   "depends_on": "eval:doc.nationality=='ليبيا'",
+   "depends_on": "eval:doc.nationality=='\u0644\u064a\u0628\u064a\u0627'",
    "fieldname": "national_id",
    "fieldtype": "Data",
    "label": "National Id",
    "unique": 1
   },
   {
-   "depends_on": "eval:doc.nationality && doc.nationality!='ليبيا'",
+   "fieldname": "column_break_passport",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.nationality && doc.nationality!='\u0644\u064a\u0628\u064a\u0627'",
    "fieldname": "passport_number",
    "fieldtype": "Data",
    "label": "Passport Number"
+  },
+  {
+   "fieldname": "tab_contact",
+   "fieldtype": "Tab Break",
+   "label": "Contact & Employment"
+  },
+  {
+   "fieldname": "section_contact",
+   "fieldtype": "Section Break",
+   "label": "Contact Information"
   },
   {
    "fieldname": "phone",
@@ -114,9 +139,43 @@
    "options": "Email"
   },
   {
+   "fieldname": "column_break_address",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "address",
    "fieldtype": "Small Text",
    "label": "Address"
+  },
+  {
+   "fieldname": "section_employment",
+   "fieldtype": "Section Break",
+   "label": "Employment"
+  },
+  {
+   "default": "teacher",
+   "fieldname": "role",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Role",
+   "options": "admin\nemployee\nteacher",
+   "reqd": 1
+  },
+  {
+   "fieldname": "title_ar",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title (AR)"
+  },
+  {
+   "fieldname": "title_en",
+   "fieldtype": "Data",
+   "label": "Title (EN)"
+  },
+  {
+   "fieldname": "column_break_employment",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "qualification",
@@ -136,10 +195,20 @@
    "options": "EIMS Academic Year"
   },
   {
+   "fieldname": "section_other",
+   "fieldtype": "Section Break",
+   "label": "Other"
+  },
+  {
    "fieldname": "user_id",
    "fieldtype": "Link",
    "label": "User Id",
    "options": "User"
+  },
+  {
+   "fieldname": "tab_credentials",
+   "fieldtype": "Tab Break",
+   "label": "Credentials"
   },
   {
    "fieldname": "section_break_credentials",
@@ -156,7 +225,7 @@
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-17 03:58:48.239811",
+ "modified": "2026-08-10 02:29:28.229623",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Staff",

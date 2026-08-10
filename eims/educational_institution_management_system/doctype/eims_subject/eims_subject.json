@@ -6,13 +6,20 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "section_details",
   "subject_name",
   "subject_name_en",
+  "column_break_subject",
   "stage",
   "subject_code",
   "subject_type"
  ],
  "fields": [
+  {
+   "fieldname": "section_details",
+   "fieldtype": "Section Break",
+   "label": "Subject Details"
+  },
   {
    "fieldname": "subject_name",
    "fieldtype": "Data",
@@ -26,6 +33,10 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Name (EN)"
+  },
+  {
+   "fieldname": "column_break_subject",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "stage",

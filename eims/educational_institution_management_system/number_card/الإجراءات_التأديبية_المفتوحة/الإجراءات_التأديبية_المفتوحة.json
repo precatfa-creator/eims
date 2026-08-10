@@ -1,0 +1,23 @@
+{
+ "aggregate_function_based_on": "",
+ "color": "Red",
+ "creation": "2026-08-10 00:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "EIMS Disciplinary Action",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"EIMS Disciplinary Action\", \"status\", \"=\", \"\\u0645\\u0641\\u062a\\u0648\\u062d\"]]",
+ "function": "Count",
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "الإجراءات التأديبية المفتوحة",
+ "modified": "2026-08-10 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "الإجراءات التأديبية المفتوحة",
+ "owner": "Administrator",
+ "parent_document_type": "",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Monthly",
+ "type": "Document Type"
+}

@@ -6,20 +6,29 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "section_enrollment",
   "student",
   "academic_year",
   "stage",
+  "column_break_enrollment",
   "section",
   "status",
   "enrollment_override_reason",
+  "enrollment_date",
   "section_break_payment",
   "total_fee",
   "paid_amount",
+  "column_break_payment",
   "outstanding_amount",
   "payment_status",
-  "enrollment_date"
+  "last_payment_date"
  ],
  "fields": [
+  {
+   "fieldname": "section_enrollment",
+   "fieldtype": "Section Break",
+   "label": "Enrollment Details"
+  },
   {
    "fieldname": "student",
    "fieldtype": "Link",
@@ -48,6 +57,10 @@
    "reqd": 1
   },
   {
+   "fieldname": "column_break_enrollment",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "section",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -71,6 +84,11 @@
    "mandatory_depends_on": "eval:doc.status=='مسجل' && doc.payment_status!='مدفوع بالكامل'"
   },
   {
+   "fieldname": "enrollment_date",
+   "fieldtype": "Date",
+   "label": "Enrollment Date"
+  },
+  {
    "fieldname": "section_break_payment",
    "fieldtype": "Section Break",
    "label": "Payment Status"
@@ -88,6 +106,10 @@
    "read_only": 1
   },
   {
+   "fieldname": "column_break_payment",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "outstanding_amount",
    "fieldtype": "Currency",
    "label": "Outstanding Amount",
@@ -102,14 +124,21 @@
    "in_list_view": 1
   },
   {
-   "fieldname": "enrollment_date",
+   "fieldname": "last_payment_date",
    "fieldtype": "Date",
-   "label": "Enrollment Date"
+   "label": "Last Payment Date",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2026-07-11 00:00:00.000000",
+ "links": [
+  {
+   "group": "Fees",
+   "link_doctype": "EIMS Student Payment",
+   "link_fieldname": "enrollment"
+  }
+ ],
+ "modified": "2026-08-10 00:00:00.000000",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Enrollment",

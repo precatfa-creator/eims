@@ -4,6 +4,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "section_class",
   "attendance_date",
   "section",
   "stage",
@@ -16,6 +17,11 @@
   "rows"
  ],
  "fields": [
+  {
+   "fieldname": "section_class",
+   "fieldtype": "Section Break",
+   "label": "Class & Schedule"
+  },
   {
    "fieldname": "attendance_date",
    "fieldtype": "Date",
@@ -77,7 +83,7 @@
   {
    "fieldname": "section_break_at2",
    "fieldtype": "Section Break",
-   "label": "Attendance"
+   "label": "Attendance Records"
   },
   {
    "fieldname": "rows",

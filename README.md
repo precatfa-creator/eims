@@ -2,6 +2,10 @@
 
 Educational Institution Management System
 
+### Documentation
+
+- [الرسوم والدفعات — دليل التشغيل](docs/fees-and-payments.md) — stage fees, partial payments, receipts.
+
 ### Installation
 
 You can install this app using the [bench](https://github.com/frappe/bench) CLI:

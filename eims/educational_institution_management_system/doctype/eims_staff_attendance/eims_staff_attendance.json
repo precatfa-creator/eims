@@ -4,6 +4,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "section_attendance_details",
   "attendance_date",
   "academic_year",
   "notes",
@@ -11,6 +12,11 @@
   "rows"
  ],
  "fields": [
+  {
+   "fieldname": "section_attendance_details",
+   "fieldtype": "Section Break",
+   "label": "Attendance Details"
+  },
   {
    "fieldname": "attendance_date",
    "fieldtype": "Date",

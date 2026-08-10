@@ -4,23 +4,31 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "section_basic",
   "guardian_name",
   "relation",
   "national_id",
   "phone",
+  "column_break_basic",
   "second_phone",
   "occupation",
   "education_level",
   "workplace",
+  "section_contact",
   "preferred_contact_method",
-  "column_break_g1",
   "email",
+  "column_break_contact",
   "address",
   "user_id",
   "section_break_children",
   "students"
  ],
  "fields": [
+  {
+   "fieldname": "section_basic",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
   {
    "fieldname": "guardian_name",
    "fieldtype": "Data",
@@ -46,6 +54,10 @@
    "in_list_view": 1
   },
   {
+   "fieldname": "column_break_basic",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "second_phone",
    "fieldtype": "Data",
    "label": "Second Phone"
@@ -66,21 +78,25 @@
    "label": "Workplace"
   },
   {
+   "fieldname": "section_contact",
+   "fieldtype": "Section Break",
+   "label": "Contact & Account"
+  },
+  {
    "fieldname": "preferred_contact_method",
    "fieldtype": "Select",
    "label": "Preferred Contact Method",
    "options": "Phone\nEmail\nSchool Diary\nOther"
   },
   {
-   "fieldname": "column_break_g1",
-   "fieldtype": "Column Break",
-   "label": ""
-  },
-  {
    "fieldname": "email",
    "fieldtype": "Data",
    "label": "Email",
    "options": "Email"
+  },
+  {
+   "fieldname": "column_break_contact",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "address",

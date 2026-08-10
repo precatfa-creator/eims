@@ -1,0 +1,23 @@
+{
+ "aggregate_function_based_on": "outstanding_amount",
+ "color": "Red",
+ "creation": "2026-08-10 00:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "EIMS Enrollment",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[]",
+ "function": "Sum",
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "إجمالي الرسوم المستحقة",
+ "modified": "2026-08-10 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "إجمالي الرسوم المستحقة",
+ "owner": "Administrator",
+ "parent_document_type": "",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Monthly",
+ "type": "Document Type"
+}

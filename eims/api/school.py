@@ -209,6 +209,26 @@ def _upsert_enrollment(student, year, stage, section=None, status=None, override
 		}).insert(ignore_permissions=True)
 
 
+def _attach_image(file_url, doctype, docname):
+	"""Bind an uploaded photo to its record so private-file reads follow the
+	doctype's permissions (an unattached private File is owner-only)."""
+	if not file_url:
+		return
+	name = frappe.db.get_value("File", {"file_url": file_url}, "name")
+	if not name:
+		return
+	f = frappe.get_doc("File", name)
+	if f.attached_to_doctype == doctype and f.attached_to_name == docname and f.is_private:
+		return
+	f.attached_to_doctype = doctype
+	f.attached_to_name = docname
+	f.is_private = 1
+	f.save(ignore_permissions=True)
+	# handle_is_private_changed() rewrites file_url when moving to /private/files
+	if f.file_url != file_url:
+		frappe.db.set_value(doctype, docname, "image", f.file_url)
+
+
 @frappe.whitelist()
 def save_student(payload):
 	p = frappe.parse_json(payload)
@@ -227,6 +247,7 @@ def save_student(payload):
 		"second_guardian_phone": p.get("secondGuardianPhone"), "phone": p.get("phone"), "email": p.get("email"),
 	})
 	doc.save(ignore_permissions=True)
+	_attach_image(p.get("image"), "EIMS Student", doc.name)
 	if p.get("yearId") and p.get("stageId"):
 		_upsert_enrollment(doc.name, p["yearId"], p["stageId"], p.get("sectionId"))
 	frappe.db.commit()
@@ -247,6 +268,7 @@ def save_staff(payload):
 		"hire_date": p.get("hireDate") or None, "hired_year": p.get("hiredYearId"),
 	})
 	doc.save(ignore_permissions=True)
+	_attach_image(p.get("image"), "EIMS Staff", doc.name)
 	ensure_staff_academic_assignment(doc)
 	frappe.db.commit()
 	return {"id": doc.name}

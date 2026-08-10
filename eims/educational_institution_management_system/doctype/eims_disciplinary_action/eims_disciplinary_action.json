@@ -4,6 +4,8 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "tab_case",
+  "section_student",
   "student",
   "student_name",
   "academic_year",
@@ -13,15 +15,27 @@
   "guardian_name",
   "guardian_phone",
   "status",
+  "tab_details",
   "section_break_d2",
   "reason",
   "summons_date",
   "suspension_from",
+  "column_break_suspension",
   "suspension_to",
   "suspension_days",
   "notes"
  ],
  "fields": [
+  {
+   "fieldname": "tab_case",
+   "fieldtype": "Tab Break",
+   "label": "Case Details"
+  },
+  {
+   "fieldname": "section_student",
+   "fieldtype": "Section Break",
+   "label": "Student & Action"
+  },
   {
    "fieldname": "student",
    "fieldtype": "Link",
@@ -89,9 +103,14 @@
    "in_standard_filter": 1
   },
   {
+   "fieldname": "tab_details",
+   "fieldtype": "Tab Break",
+   "label": "Action Details"
+  },
+  {
    "fieldname": "section_break_d2",
    "fieldtype": "Section Break",
-   "label": "Details"
+   "label": "Reason & Suspension"
   },
   {
    "fieldname": "reason",
@@ -110,6 +129,10 @@
    "fieldtype": "Date",
    "label": "Suspension From",
    "depends_on": "eval:doc.action_type=='إيقاف عن الدراسة'"
+  },
+  {
+   "fieldname": "column_break_suspension",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "suspension_to",
@@ -144,8 +167,8 @@
    "delete": 1,
    "read": 1,
    "write": 1,
-   "role": "System Manager"
-   ,"submit": 1
+   "role": "System Manager",
+   "submit": 1
   },
   {
    "create": 1,
@@ -153,8 +176,8 @@
    "delete": 1,
    "read": 1,
    "write": 1,
-   "role": "Academic Admin"
-   ,"submit": 1
+   "role": "Academic Admin",
+   "submit": 1
   },
   {
    "read": 1,

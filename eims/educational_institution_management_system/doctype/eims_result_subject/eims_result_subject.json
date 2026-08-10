@@ -5,20 +5,29 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "section_subject",
   "subject",
   "subject_name",
   "subject_type",
+  "column_break_info",
   "max_mark",
   "min_mark",
+  "section_marks",
   "term_1_total",
   "term_2_total",
   "yearly_total",
   "make_up_exam",
+  "column_break_marks",
   "final_total",
   "status",
   "grade"
  ],
  "fields": [
+  {
+   "fieldname": "section_subject",
+   "fieldtype": "Section Break",
+   "label": "Subject Details"
+  },
   {
    "columns": 2,
    "fieldname": "subject",
@@ -43,6 +52,10 @@
    "read_only": 1
   },
   {
+   "fieldname": "column_break_info",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "max_mark",
    "fieldtype": "Float",
    "label": "Max Mark"
@@ -51,6 +64,11 @@
    "fieldname": "min_mark",
    "fieldtype": "Float",
    "label": "Min Mark"
+  },
+  {
+   "fieldname": "section_marks",
+   "fieldtype": "Section Break",
+   "label": "Marks & Grading"
   },
   {
    "columns": 1,
@@ -79,6 +97,10 @@
    "fieldname": "make_up_exam",
    "fieldtype": "Float",
    "label": "Make-up Exam"
+  },
+  {
+   "fieldname": "column_break_marks",
+   "fieldtype": "Column Break"
   },
   {
    "columns": 1,

@@ -195,7 +195,10 @@ function set_context_queries(frm) {
 
 	if (frm.doctype === "EIMS Student Payment") {
 		frm.set_query("enrollment", () => ({
-			filters: { academic_year: frm.doc.academic_year || "__none__" },
+			filters: {
+				academic_year: frm.doc.academic_year || "__none__",
+				status: ["not in", ["منسحب", "منقول", "متخرج"]],
+			},
 		}));
 	}
 

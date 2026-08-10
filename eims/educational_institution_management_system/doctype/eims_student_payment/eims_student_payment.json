@@ -6,13 +6,40 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "student",
-  "academic_year",
+  "section_links",
   "enrollment",
+  "student",
+  "column_break_links",
+  "academic_year",
+  "installment_no",
+  "section_payment",
   "payment_date",
-  "amount_paid"
+  "amount_paid",
+  "payment_method",
+  "column_break_payment",
+  "reference_no",
+  "notes",
+  "section_balance",
+  "total_fee",
+  "previously_paid",
+  "column_break_balance",
+  "balance_after",
+  "payment_summary"
  ],
  "fields": [
+  {
+   "fieldname": "section_links",
+   "fieldtype": "Section Break",
+   "label": "Student & Enrollment"
+  },
+  {
+   "fieldname": "enrollment",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Enrollment",
+   "options": "EIMS Enrollment",
+   "reqd": 1
+  },
   {
    "fieldname": "student",
    "fieldtype": "Link",
@@ -23,28 +50,36 @@
    "read_only": 1
   },
   {
+   "fieldname": "column_break_links",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "academic_year",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Academic Year",
    "options": "EIMS Academic Year",
    "read_only": 1
   },
   {
-   "fieldname": "enrollment",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Enrollment",
-   "options": "EIMS Enrollment",
-   "reqd": 1
+   "fieldname": "installment_no",
+   "fieldtype": "Int",
+   "label": "Installment No.",
+   "description": "Order of this payment for the enrollment: 1 = first instalment, 2 = second, and so on.",
+   "read_only": 1,
+   "no_copy": 1
   },
   {
+   "fieldname": "section_payment",
+   "fieldtype": "Section Break",
+   "label": "Payment Details"
+  },
+  {
+   "default": "Today",
    "fieldname": "payment_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Payment Date",
-   "default": "Today",
    "reqd": 1
   },
   {
@@ -52,13 +87,75 @@
    "fieldname": "amount_paid",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Amount Paid"
+   "label": "Amount Paid",
+   "reqd": 1
+  },
+  {
+   "default": "نقداً",
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Payment Method",
+   "options": "نقداً\nتحويل بنكي\nشيك\nبطاقة"
+  },
+  {
+   "fieldname": "column_break_payment",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reference_no",
+   "fieldtype": "Data",
+   "label": "Reference No.",
+   "description": "Cheque, transfer or receipt reference, when there is one."
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "section_balance",
+   "fieldtype": "Section Break",
+   "label": "Balance At Time Of Payment"
+  },
+  {
+   "fieldname": "total_fee",
+   "fieldtype": "Currency",
+   "label": "Total Fee",
+   "read_only": 1,
+   "no_copy": 1
+  },
+  {
+   "fieldname": "previously_paid",
+   "fieldtype": "Currency",
+   "label": "Paid Before This Payment",
+   "read_only": 1,
+   "no_copy": 1
+  },
+  {
+   "fieldname": "column_break_balance",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "balance_after",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Remaining After This Payment",
+   "read_only": 1,
+   "no_copy": 1
+  },
+  {
+   "fieldname": "payment_summary",
+   "fieldtype": "Data",
+   "label": "Payment Summary",
+   "read_only": 1,
+   "no_copy": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
  "is_submittable": 1,
- "modified": "2026-07-11 00:00:00.000000",
+ "modified": "2026-08-10 00:00:00.000000",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Student Payment",
@@ -86,5 +183,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "student"
 }

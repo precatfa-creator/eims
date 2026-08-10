@@ -6,36 +6,58 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "tab_personal",
+  "section_identity",
   "image",
   "student_name",
   "student_name_en",
   "enrollment_number",
+  "column_break_dob",
   "date_of_birth",
   "place_of_birth",
   "gender",
+  "section_nationality",
   "nationality",
+  "column_break_passport",
   "national_id",
   "passport_number",
-  "column_break_5",
+  "tab_contact",
+  "section_contact",
   "phone",
+  "email",
+  "column_break_address",
+  "address",
+  "section_guardian",
   "guardian",
   "guardian_name",
   "guardian_phone",
   "guardian_user",
+  "column_break_parent",
   "parent_name",
   "parent_phone",
   "second_guardian_phone",
-  "email",
-  "address",
+  "section_other",
   "notes",
   "user_id",
+  "tab_academic",
   "section_break_history",
   "previous_records"
  ],
  "fields": [
   {
+   "fieldname": "tab_personal",
+   "fieldtype": "Tab Break",
+   "label": "Personal Details"
+  },
+  {
+   "fieldname": "section_identity",
+   "fieldtype": "Section Break",
+   "label": "Basic Info"
+  },
+  {
    "fieldname": "image",
    "fieldtype": "Attach Image",
+   "hidden": 1,
    "label": "Image"
   },
   {
@@ -60,6 +82,10 @@
    "unique": 1
   },
   {
+   "fieldname": "column_break_dob",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "date_of_birth",
    "fieldtype": "Date",
    "label": "Date Of Birth"
@@ -78,7 +104,12 @@
    "options": "male\nfemale"
   },
   {
-   "default": "ليبيا",
+   "fieldname": "section_nationality",
+   "fieldtype": "Section Break",
+   "label": "Nationality & ID"
+  },
+  {
+   "default": "\u0644\u064a\u0628\u064a\u0627",
    "fieldname": "nationality",
    "fieldtype": "Link",
    "in_standard_filter": 1,
@@ -86,21 +117,31 @@
    "options": "EIMS Nationality"
   },
   {
-   "depends_on": "eval:doc.nationality=='ليبيا'",
+   "depends_on": "eval:doc.nationality=='\u0644\u064a\u0628\u064a\u0627'",
    "fieldname": "national_id",
    "fieldtype": "Data",
    "label": "National Id",
    "unique": 1
   },
   {
-   "depends_on": "eval:doc.nationality && doc.nationality!='ليبيا'",
+   "fieldname": "column_break_passport",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.nationality && doc.nationality!='\u0644\u064a\u0628\u064a\u0627'",
    "fieldname": "passport_number",
    "fieldtype": "Data",
    "label": "Passport Number"
   },
   {
-   "fieldname": "column_break_5",
-   "fieldtype": "Column Break"
+   "fieldname": "tab_contact",
+   "fieldtype": "Tab Break",
+   "label": "Contact & Guardian"
+  },
+  {
+   "fieldname": "section_contact",
+   "fieldtype": "Section Break",
+   "label": "Contact Information"
   },
   {
    "fieldname": "phone",
@@ -109,32 +150,56 @@
    "options": "Phone"
   },
   {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "column_break_address",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "section_guardian",
+   "fieldtype": "Section Break",
+   "label": "Guardian Information"
+  },
+  {
    "fieldname": "guardian",
    "fieldtype": "Link",
    "label": "Guardian Document",
    "options": "EIMS Guardian"
   },
   {
+   "fetch_from": "guardian.guardian_name",
    "fieldname": "guardian_name",
    "fieldtype": "Data",
    "label": "Guardian Name",
-   "fetch_from": "guardian.guardian_name",
    "read_only": 1
   },
   {
+   "fetch_from": "guardian.phone",
    "fieldname": "guardian_phone",
    "fieldtype": "Data",
    "label": "Guardian Phone",
-   "fetch_from": "guardian.phone",
    "read_only": 1
   },
   {
+   "fetch_from": "guardian.user_id",
    "fieldname": "guardian_user",
    "fieldtype": "Link",
    "label": "Guardian User",
    "options": "User",
-   "fetch_from": "guardian.user_id",
    "read_only": 1
+  },
+  {
+   "fieldname": "column_break_parent",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "parent_name",
@@ -154,15 +219,9 @@
    "options": "Phone"
   },
   {
-   "fieldname": "email",
-   "fieldtype": "Data",
-   "label": "Email",
-   "options": "Email"
-  },
-  {
-   "fieldname": "address",
-   "fieldtype": "Small Text",
-   "label": "Address"
+   "fieldname": "section_other",
+   "fieldtype": "Section Break",
+   "label": "Other"
   },
   {
    "fieldname": "notes",
@@ -174,6 +233,11 @@
    "fieldtype": "Link",
    "label": "User Id",
    "options": "User"
+  },
+  {
+   "fieldname": "tab_academic",
+   "fieldtype": "Tab Break",
+   "label": "Academic Record"
   },
   {
    "fieldname": "section_break_history",
@@ -190,7 +254,7 @@
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-11 00:00:00.000000",
+ "modified": "2026-08-10 02:28:43.344965",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Student",

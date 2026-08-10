@@ -4,13 +4,14 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "section_class",
   "log_date",
-  "academic_year",
-  "subject",
-  "stage",
   "section",
+  "stage",
   "teacher",
   "column_break_da1",
+  "academic_year",
+  "subject",
   "section_break_da2",
   "accomplishment",
   "homework",
@@ -19,6 +20,11 @@
   "lessons"
  ],
  "fields": [
+  {
+   "fieldname": "section_class",
+   "fieldtype": "Section Break",
+   "label": "Class Information"
+  },
   {
    "fieldname": "log_date",
    "fieldtype": "Date",
@@ -70,7 +76,7 @@
   {
    "fieldname": "section_break_da2",
    "fieldtype": "Section Break",
-   "label": ""
+   "label": "Accomplishment & Notes"
   },
   {
    "fieldname": "accomplishment",
@@ -115,8 +121,8 @@
    "delete": 1,
    "read": 1,
    "write": 1,
-   "role": "System Manager"
-   ,"submit": 1
+   "role": "System Manager",
+   "submit": 1
   },
   {
    "create": 1,
@@ -124,8 +130,8 @@
    "delete": 1,
    "read": 1,
    "write": 1,
-   "role": "Academic Admin"
-   ,"submit": 1
+   "role": "Academic Admin",
+   "submit": 1
   },
   {
    "create": 1,

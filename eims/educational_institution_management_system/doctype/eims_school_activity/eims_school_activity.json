@@ -4,6 +4,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "section_activity_details",
   "activity_name",
   "activity_type",
   "academic_year",
@@ -19,6 +20,11 @@
   "participants"
  ],
  "fields": [
+  {
+   "fieldname": "section_activity_details",
+   "fieldtype": "Section Break",
+   "label": "Activity Details"
+  },
   {
    "fieldname": "activity_name",
    "fieldtype": "Data",

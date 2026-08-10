@@ -6,12 +6,19 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "section_stage_details",
   "name_ar",
   "name_en",
+  "column_break_order",
   "order",
   "category"
  ],
  "fields": [
+  {
+   "fieldname": "section_stage_details",
+   "fieldtype": "Section Break",
+   "label": "Stage Details"
+  },
   {
    "fieldname": "name_ar",
    "fieldtype": "Data",
@@ -26,6 +33,10 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Name (EN)"
+  },
+  {
+   "fieldname": "column_break_order",
+   "fieldtype": "Column Break"
   },
   {
    "default": "1",

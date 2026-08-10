@@ -5,15 +5,24 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "section_student",
   "student",
   "student_name",
+  "section_scores",
   "coursework",
   "exam",
+  "column_break_scores",
   "total_score",
   "status",
+  "section_notes",
   "notes"
  ],
  "fields": [
+  {
+   "fieldname": "section_student",
+   "fieldtype": "Section Break",
+   "label": "Student"
+  },
   {
    "columns": 3,
    "fieldname": "student",
@@ -32,6 +41,11 @@
    "read_only": 1
   },
   {
+   "fieldname": "section_scores",
+   "fieldtype": "Section Break",
+   "label": "Scores"
+  },
+  {
    "columns": 1,
    "fieldname": "coursework",
    "fieldtype": "Float",
@@ -46,6 +60,10 @@
    "label": "Exam"
   },
   {
+   "fieldname": "column_break_scores",
+   "fieldtype": "Column Break"
+  },
+  {
    "columns": 1,
    "fieldname": "total_score",
    "fieldtype": "Float",
@@ -57,6 +75,11 @@
    "fieldname": "status",
    "fieldtype": "Data",
    "label": "Status"
+  },
+  {
+   "fieldname": "section_notes",
+   "fieldtype": "Section Break",
+   "label": "Notes"
   },
   {
    "fieldname": "notes",

@@ -1,7 +1,6 @@
 {
   "Good Morning, Admin": "صباح الخير، أيها المسؤول",
   "Let's manage the school today": "دعنا ندير المدرسة اليوم",
-
   "Total Students": "إجمالي الطلاب",
   "Avg Attendance": "متوسط الحضور",
   "Top Grade": "أعلى درجة",
@@ -9,25 +8,20 @@
   "enrolled": "مسجل",
   "today": "اليوم",
   "active": "نشط",
-
   "Academic Performance": "الأداء الأكاديمي",
   "Weekly": "أسبوعي",
   "Monthly": "شهري",
   "Yearly": "سنوي",
-
   "Student of the Month": "طالب الشهر",
   "Perfect Attendance": "حضور مثالي",
   "Science": "العلوم",
-
   "Grades": "التخصصات",
   "Classes": "الفصول",
   "Terms": "الفصول الدراسية",
-
   "Scheduled": "المواعيد",
   "view all": "عرض الكل",
   "Math Final Exam": "امتحان الرياضيات النهائي",
   "Room": "قاعة",
-
   "Quick Actions": "إجراءات سريعة",
   "Add Student": "إضافة طالب",
   "Register a new student to the system.": "تسجيل طالب جديد في النظام.",
@@ -37,7 +31,6 @@
   "Results": "النتائج",
   "Print Reports": "طباعة التقارير",
   "Generate student final grade cards.": "إنشاء بطاقات الدرجات النهائية.",
-
   "Students": "الطلاب",
   "Manage student records": "إدارة سجلات الطلاب",
   "Search students...": "البحث عن طلاب...",
@@ -52,7 +45,6 @@
   "Status": "الحالة",
   "Actions": "الإجراءات",
   "Active": "نشط",
-
   "Manage academic classes": "إدارة الفصول الدراسية",
   "New Class": "فصل جديد",
   "Advanced Mathematics": "الرياضيات المتقدمة",
@@ -67,7 +59,6 @@
   "Mr. Brown": "أ. باسم يوسف",
   "Mrs. Taylor": "أ. تهاني يوسف",
   "Dr. White": "د. وليد خليل",
-
   "Reports": "التقارير",
   "Generate and view reports": "إنشاء وعرض التقارير",
   "Generate Report": "إنشاء تقرير",
@@ -78,7 +69,6 @@
   "Recent Generations": "آخر التقارير",
   "Final Report Cards": "بطاقات الدرجات النهائية",
   "Generated on Dec": "تم الإنشاء في ديسمبر",
-
   "Schedule": "الجدول",
   "School timetable and events": "الجدول والمواعيد الرسمية",
   "Today": "اليوم",
@@ -101,7 +91,6 @@
   "Lab 2": "معمل 2",
   "Lab 1": "معمل 1",
   "Conference Room": "قاعة الاجتماعات",
-
   "Settings": "الإعدادات",
   "System configuration": "إعدادات النظام",
   "Save Changes": "حفظ التغييرات",
@@ -113,14 +102,11 @@
   "Receive daily summary emails": "تلقي ملخص البريد اليومي",
   "Auto-Backup": "نسخ احتياطي تلقائي",
   "Backup database weekly": "نسخ احتياطي أسبوعي لقاعدة البيانات",
-
   "Confirm Logout": "تأكيد الخروج",
   "Are you sure you want to log out of your session?": "هل أنت متأكد أنك تريد تسجيل خروجك من النظام؟",
   "Cancel": "إلغاء",
   "Log Out": "تسجيل خروج",
-
   "Ask Fahim!": "اسأل فهيم!",
-
   "Add New Event": "إضافة حدث جديد",
   "Event Title": "عنوان الحدث",
   "Meeting with parents": "اجتماع مع أولياء الأمور",
@@ -128,7 +114,6 @@
   "Start Time": "وقت البداية",
   "End Time": "وقت النهاية",
   "Save Event": "حفظ الحدث",
-
   "Add New Student": "إضافة طالب جديد",
   "First Name": "الاسم الأول",
   "Last Name": "اسم العائلة",
@@ -137,7 +122,6 @@
   "Grade Level": "التخصص",
   "Date of Birth": "تاريخ الميلاد",
   "Save Student": "حفظ الطالب",
-
   "Enter Subject Results": "إدخال نتائج المادة",
   "Select Student": "اختيار الطالب",
   "Subject": "المادة",
@@ -146,20 +130,17 @@
   "English": "اللغة الإنجليزية",
   "Final Score (0-100)": "الدرجة النهائية (0-100)",
   "Save Result": "حفظ النتيجة",
-
   "Print Report Cards": "طباعة بطاقات الدرجات",
   "Select Class/Grade": "اختيار التخصص/المادة",
   "Ready to generate 32 report cards.": "جاهز لإنشاء 32 بطاقة درجات.",
   "Includes all subjects and attendance records.": "يتضمن جميع المواد وسجلات الحضور.",
   "Generate & Print PDF": "إنشاء وطباعة PDF",
-
   "All Actions": "جميع الإجراءات",
   "Register a new student": "تسجيل طالب جديد",
   "Input subject results": "إدخال نتائج المادة",
   "Generate report cards": "إنشاء بطاقات الدرجات",
   "Manage Classes": "إدارة الفصول",
   "View and edit classes": "عرض وتعديل الفصول",
-
   "Search students, classes, reports...": "البحث عن طلاب، تخصصات، مواد...",
   "Recent Searches": "عمليات البحث الأخيرة",
   "No results found for": "لا توجد نتائج لـ",
@@ -178,7 +159,6 @@
   "Attendance Summary Report": "تقرير ملخص الحضور",
   "Staff Meeting - 02:30 PM": "اجتماع الموظفين - 02:30 م",
   "Morning Assembly - 08:00 AM": "الطابور الصباحي - 08:00 ص",
-  "System Preferences": "تفضيلات النظام",
   "محمد أحمد - Grade 10": "محمد أحمد - تخصص 10",
   "فاطمة علي - Grade 10": "فاطمة علي - تخصص 10",
   "علي حسن - Grade 11": "علي حسن - تخصص 11",
@@ -236,7 +216,6 @@
   "Final Review": "مراجعة نهائية",
   "Web Development Workshop": "ورشة عمل تطوير الويب",
   "Hall 1": "قاعة 1",
-  "Lab 2": "معمل 2",
   "exam": "اختبار",
   "min": "دقيقة",
   "Jan": "يناير",
@@ -267,7 +246,6 @@
   "February": "فبراير",
   "March": "مارس",
   "April": "أبريل",
-  "May": "مايو",
   "June": "يونيو",
   "July": "يوليو",
   "August": "أغسطس",
@@ -282,10 +260,8 @@
   "Th": "خ",
   "Fr": "ج",
   "Sa": "س",
-  "Today": "اليوم",
   "Coming Soon..": "قريباً..",
   "Coming Soon": "قريباً",
-
   "Dashboard": "الرئيسية",
   "Stages": "المراحل الدراسية",
   "Academic stages and sections": "المراحل الدراسية والفصول",
@@ -294,7 +270,6 @@
   "Stage": "المرحلة",
   "Not assigned": "غير معيّن",
   "Fee": "الرسوم",
-
   "Students Registry": "سجل الطلبة",
   "Print Report": "طباعة تقرير",
   "All Stages": "جميع المراحل",
@@ -315,7 +290,6 @@
   "Guardian": "ولي الأمر",
   "Payment History": "سجل الدفعات",
   "Current": "الحالية",
-
   "Teaching Staff": "الكادر التعليمي",
   "Administration, staff and teachers": "الإدارة والموظفون والمعلمون",
   "Search staff...": "البحث في الكادر...",
@@ -333,27 +307,22 @@
   "Confirm Assignment": "تأكيد التعيين",
   "Teaching History": "السجل التاريخي للتدريس",
   "No previous records": "لا توجد سجلات سابقة",
-
   "Subjects per stage with their teachers": "المواد تحت كل مرحلة مع معلميها",
-
   "Academic Year Settings": "إعدادات السنة الدراسية",
   "Set the current year and the fee value per stage": "حدّد السنة الحالية وقيمة الرسوم لكل مرحلة",
   "Saved": "تم الحفظ",
   "Current Academic Year": "السنة الدراسية الحالية",
   "Saving will set the selected year as the active year.": "الحفظ سيجعل السنة المختارة هي السنة النشطة.",
   "Stage Fees": "رسوم المراحل",
-
   "Collection Rate": "نسبة التحصيل",
   "Students by Stage": "الطلبة حسب المرحلة",
   "Fees Collection": "تحصيل الرسوم",
   "Collected": "المُحصّل",
   "Outstanding": "المتبقّي",
-
   "Loading...": "جارٍ التحميل...",
   "Failed to load data": "تعذّر تحميل البيانات",
   "Retry": "إعادة المحاولة",
   "Invalid login. Please check your credentials.": "بيانات الدخول غير صحيحة. يرجى التحقق.",
-
   "Save": "حفظ",
   "Edit": "تعديل",
   "Remove": "إزالة",
@@ -388,7 +357,6 @@
   "All sections": "كل الفصول",
   "Start Date": "تاريخ البداية",
   "End Date": "تاريخ النهاية",
-  "Add Student": "إضافة طالب",
   "Edit Student": "تعديل طالب",
   "Add Staff Member": "إضافة عضو كادر",
   "Edit Staff Member": "تعديل عضو الكادر",
@@ -398,5 +366,20 @@
   "New Academic Year": "سنة دراسية جديدة",
   "Save Fees": "حفظ الرسوم",
   "Set as active year": "تعيينها سنة نشطة",
-  "Only one year can be active at a time.": "سنة واحدة فقط يمكن أن تكون نشطة."
+  "Only one year can be active at a time.": "سنة واحدة فقط يمكن أن تكون نشطة.",
+  "Attendance": "الحضور",
+  "Record daily attendance per class.": "تسجيل الحضور اليومي لكل فصل.",
+  "My Students Grades": "درجات طلابي",
+  "View grades across your classes.": "عرض الدرجات في جميع فصولك.",
+  "Class grade sheet": "كشف درجات الفصل",
+  "Enrollment History": "سجل التسجيل",
+  "Email": "البريد الإلكتروني",
+  "Logout": "تسجيل الخروج",
+  "Record Payment": "تسجيل دفعة",
+  "Enter a valid amount": "أدخل مبلغاً صحيحاً",
+  "Saving...": "جارٍ الحفظ...",
+  "Save failed": "فشل الحفظ",
+  "Cannot reach the server. Check your connection.": "تعذّر الوصول إلى الخادم. تحقّق من اتصالك.",
+  "Server error. Please try again later.": "خطأ في الخادم. حاول مرة أخرى لاحقاً.",
+  "Amount to add": "المبلغ المضاف"
 }

@@ -6,17 +6,25 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "section_assignment",
   "staff",
   "staff_name",
   "academic_year",
+  "column_break_role",
   "role",
   "title",
   "status",
+  "section_period",
   "start_date",
   "end_date",
   "notes"
  ],
  "fields": [
+  {
+   "fieldname": "section_assignment",
+   "fieldtype": "Section Break",
+   "label": "Assignment"
+  },
   {
    "fieldname": "staff",
    "fieldtype": "Link",
@@ -44,6 +52,10 @@
    "reqd": 1
   },
   {
+   "fieldname": "column_break_role",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "role",
    "fieldtype": "Select",
    "in_list_view": 1,
@@ -64,6 +76,11 @@
    "in_standard_filter": 1,
    "label": "Status",
    "options": "Active\nOn Leave\nInactive"
+  },
+  {
+   "fieldname": "section_period",
+   "fieldtype": "Section Break",
+   "label": "Period & Notes"
   },
   {
    "fieldname": "start_date",

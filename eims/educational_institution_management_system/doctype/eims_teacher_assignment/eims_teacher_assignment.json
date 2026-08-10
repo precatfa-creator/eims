@@ -6,14 +6,21 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "section_assignment",
   "staff",
   "staff_name",
   "academic_year",
+  "column_break_assignment",
   "stage",
   "section",
   "subject"
  ],
  "fields": [
+  {
+   "fieldname": "section_assignment",
+   "fieldtype": "Section Break",
+   "label": "Assignment Details"
+  },
   {
    "fieldname": "staff",
    "fieldtype": "Link",
@@ -39,6 +46,10 @@
    "label": "Academic Year",
    "options": "EIMS Academic Year",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_assignment",
+   "fieldtype": "Column Break"
   },
   {
    "fetch_from": "subject.stage",

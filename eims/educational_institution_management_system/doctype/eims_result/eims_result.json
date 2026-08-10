@@ -6,6 +6,8 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "tab_overview",
+  "section_student",
   "student",
   "academic_year",
   "stage",
@@ -15,17 +17,30 @@
   "secret_number",
   "overall_rank",
   "status",
+  "tab_results",
   "section_break_results",
   "results",
+  "tab_summary",
   "section_break_totals",
   "grand_total",
   "max_total",
   "column_break_totals",
   "pass_percentage",
   "overall_grade",
+  "section_notes",
   "notes"
  ],
  "fields": [
+  {
+   "fieldname": "tab_overview",
+   "fieldtype": "Tab Break",
+   "label": "Overview"
+  },
+  {
+   "fieldname": "section_student",
+   "fieldtype": "Section Break",
+   "label": "Student Information"
+  },
   {
    "fieldname": "student",
    "fieldtype": "Link",
@@ -92,15 +107,24 @@
    "options": "مسودة\nناجح ومنقول\nمرحّل\nدور ثاني\nراسب\nغائب"
   },
   {
-   "fieldname": "section_break_results",
-   "fieldtype": "Section Break",
+   "fieldname": "tab_results",
+   "fieldtype": "Tab Break",
    "label": "Subject Results"
+  },
+  {
+   "fieldname": "section_break_results",
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "results",
    "fieldtype": "Table",
    "label": "Results",
    "options": "EIMS Result Subject"
+  },
+  {
+   "fieldname": "tab_summary",
+   "fieldtype": "Tab Break",
+   "label": "Summary"
   },
   {
    "fieldname": "section_break_totals",
@@ -134,6 +158,11 @@
    "fieldtype": "Select",
    "label": "Overall Grade",
    "options": "\nممتاز\nجيد جداً\nجيد\nمقبول\nضعيف"
+  },
+  {
+   "fieldname": "section_notes",
+   "fieldtype": "Section Break",
+   "label": "Notes"
   },
   {
    "fieldname": "notes",

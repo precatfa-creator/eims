@@ -6,16 +6,24 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "section_details",
   "academic_year",
   "stage",
   "subject",
   "subject_name",
+  "column_break_status",
   "is_active",
   "start_date",
   "end_date",
+  "section_notes",
   "notes"
  ],
  "fields": [
+  {
+   "fieldname": "section_details",
+   "fieldtype": "Section Break",
+   "label": "Curriculum Details"
+  },
   {
    "fieldname": "academic_year",
    "fieldtype": "Link",
@@ -54,6 +62,10 @@
    "read_only": 1
   },
   {
+   "fieldname": "column_break_status",
+   "fieldtype": "Column Break"
+  },
+  {
    "default": "1",
    "fieldname": "is_active",
    "fieldtype": "Check",
@@ -69,6 +81,11 @@
    "fieldname": "end_date",
    "fieldtype": "Date",
    "label": "End Date"
+  },
+  {
+   "fieldname": "section_notes",
+   "fieldtype": "Section Break",
+   "label": "Notes"
   },
   {
    "fieldname": "notes",

@@ -4,24 +4,38 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "tab_request_details",
+  "section_request_info",
   "subject",
   "request_type",
   "raised_by_role",
   "raised_by_doctype",
   "raised_by",
+  "column_break_raised_by",
   "raised_by_user",
   "student",
   "academic_year",
-  "column_break_r1",
+  "tab_handling",
+  "section_status",
   "status",
   "priority",
   "assigned_to",
-  "section_break_r2",
+  "section_description",
   "description",
-  "section_break_r3",
+  "section_replies",
   "replies"
  ],
  "fields": [
+  {
+   "fieldname": "tab_request_details",
+   "fieldtype": "Tab Break",
+   "label": "Request Details"
+  },
+  {
+   "fieldname": "section_request_info",
+   "fieldtype": "Section Break",
+   "label": "Request Information"
+  },
   {
    "fieldname": "subject",
    "fieldtype": "Data",
@@ -60,6 +74,10 @@
    "in_list_view": 1
   },
   {
+   "fieldname": "column_break_raised_by",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "raised_by_user",
    "fieldtype": "Link",
    "label": "Requester User",
@@ -81,9 +99,14 @@
    "reqd": 1
   },
   {
-   "fieldname": "column_break_r1",
-   "fieldtype": "Column Break",
-   "label": ""
+   "fieldname": "tab_handling",
+   "fieldtype": "Tab Break",
+   "label": "Handling & Replies"
+  },
+  {
+   "fieldname": "section_status",
+   "fieldtype": "Section Break",
+   "label": "Status & Assignment"
   },
   {
    "fieldname": "status",
@@ -108,9 +131,9 @@
    "options": "User"
   },
   {
-   "fieldname": "section_break_r2",
+   "fieldname": "section_description",
    "fieldtype": "Section Break",
-   "label": "Section Break R2"
+   "label": "Description"
   },
   {
    "fieldname": "description",
@@ -119,9 +142,9 @@
    "reqd": 1
   },
   {
-   "fieldname": "section_break_r3",
+   "fieldname": "section_replies",
    "fieldtype": "Section Break",
-   "label": "Section Break R3"
+   "label": "Replies"
   },
   {
    "fieldname": "replies",

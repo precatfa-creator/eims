@@ -4,6 +4,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "section_details",
   "title",
   "staff",
   "academic_year",
@@ -15,6 +16,11 @@
   "slots"
  ],
  "fields": [
+  {
+   "fieldname": "section_details",
+   "fieldtype": "Section Break",
+   "label": "Timetable Details"
+  },
   {
    "fieldname": "title",
    "fieldtype": "Data",
@@ -64,7 +70,7 @@
   {
    "fieldname": "section_break_t2",
    "fieldtype": "Section Break",
-   "label": "Slots"
+   "label": "Timetable Slots"
   },
   {
    "fieldname": "slots",
