@@ -381,5 +381,13 @@
   "Save failed": "فشل الحفظ",
   "Cannot reach the server. Check your connection.": "تعذّر الوصول إلى الخادم. تحقّق من اتصالك.",
   "Server error. Please try again later.": "خطأ في الخادم. حاول مرة أخرى لاحقاً.",
-  "Amount to add": "المبلغ المضاف"
+  "Amount to add": "المبلغ المضاف",
+  "Announcements & News": "الإشعارات والأخبار",
+  "Announcements": "الإشعارات",
+  "No announcements yet": "لا توجد إشعارات بعد",
+  "Mark all as read": "تعليم الكل كمقروء",
+  "Refresh": "تحديث",
+  "Attachment": "مرفق",
+  "Open Link": "فتح الرابط",
+  "All": "الكل"
 }

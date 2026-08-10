@@ -1,0 +1,261 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:ANN-{#####}",
+ "creation": "2026-08-10 04:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tab_content",
+  "section_basic",
+  "title",
+  "category",
+  "column_break_meta",
+  "priority",
+  "academic_year",
+  "section_body",
+  "body",
+  "section_attachment",
+  "attachment",
+  "link_url",
+  "tab_audience",
+  "section_audience",
+  "audience",
+  "audience_help",
+  "section_audience_roles",
+  "roles",
+  "section_audience_users",
+  "users",
+  "tab_publishing",
+  "section_publishing",
+  "status",
+  "column_break_dates",
+  "publish_from",
+  "publish_until",
+  "section_pinned",
+  "is_pinned"
+ ],
+ "fields": [
+  {
+   "fieldname": "tab_content",
+   "fieldtype": "Tab Break",
+   "label": "Content"
+  },
+  {
+   "fieldname": "section_basic",
+   "fieldtype": "Section Break",
+   "label": "Basic Info"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "default": "إشعار",
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Category",
+   "options": "إشعار\nخبر\nتنبيه\nإعلان",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_meta",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "عادي",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Priority",
+   "options": "عادي\nمهم\nعاجل"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "EIMS Academic Year"
+  },
+  {
+   "fieldname": "section_body",
+   "fieldtype": "Section Break",
+   "label": "Message"
+  },
+  {
+   "fieldname": "body",
+   "fieldtype": "Text Editor",
+   "label": "Body",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_attachment",
+   "fieldtype": "Section Break",
+   "label": "Attachment & Link"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "link_url",
+   "fieldtype": "Data",
+   "label": "Link",
+   "options": "URL"
+  },
+  {
+   "fieldname": "tab_audience",
+   "fieldtype": "Tab Break",
+   "label": "Audience"
+  },
+  {
+   "fieldname": "section_audience",
+   "fieldtype": "Section Break",
+   "label": "Who Can See This"
+  },
+  {
+   "default": "الجميع",
+   "fieldname": "audience",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Audience",
+   "options": "الجميع\nحسب الدور\nمستخدمون محددون",
+   "reqd": 1
+  },
+  {
+   "fieldname": "audience_help",
+   "fieldtype": "HTML",
+   "label": "Audience Help",
+   "options": "<p class=\"text-muted small\">«الجميع»: كل من يدخل البوابة. «حسب الدور»: الأدوار المحددة فقط (مثلاً المعلمون فقط). «مستخدمون محددون»: الأشخاص المدرجون فقط.</p>"
+  },
+  {
+   "depends_on": "eval:doc.audience=='حسب الدور'",
+   "fieldname": "section_audience_roles",
+   "fieldtype": "Section Break",
+   "label": "Target Roles"
+  },
+  {
+   "depends_on": "eval:doc.audience=='حسب الدور'",
+   "fieldname": "roles",
+   "fieldtype": "Table",
+   "label": "Roles",
+   "options": "EIMS Announcement Role"
+  },
+  {
+   "depends_on": "eval:doc.audience=='مستخدمون محددون'",
+   "fieldname": "section_audience_users",
+   "fieldtype": "Section Break",
+   "label": "Target Users"
+  },
+  {
+   "depends_on": "eval:doc.audience=='مستخدمون محددون'",
+   "fieldname": "users",
+   "fieldtype": "Table",
+   "label": "Users",
+   "options": "EIMS Announcement User"
+  },
+  {
+   "fieldname": "tab_publishing",
+   "fieldtype": "Tab Break",
+   "label": "Publishing"
+  },
+  {
+   "fieldname": "section_publishing",
+   "fieldtype": "Section Break",
+   "label": "Status & Schedule"
+  },
+  {
+   "default": "مسودة",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "مسودة\nمنشور\nمؤرشف",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_dates",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Leave empty to publish immediately.",
+   "fieldname": "publish_from",
+   "fieldtype": "Datetime",
+   "label": "Publish From"
+  },
+  {
+   "description": "Leave empty to keep showing indefinitely.",
+   "fieldname": "publish_until",
+   "fieldtype": "Datetime",
+   "label": "Publish Until"
+  },
+  {
+   "fieldname": "section_pinned",
+   "fieldtype": "Section Break",
+   "label": "Display"
+  },
+  {
+   "default": "0",
+   "description": "Pinned announcements stay at the top of the portal feed.",
+   "fieldname": "is_pinned",
+   "fieldtype": "Check",
+   "label": "Pinned"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-10 04:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Announcement",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Academic Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  },
+  {
+   "read": 1,
+   "role": "Student"
+  },
+  {
+   "read": 1,
+   "role": "Guardian"
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "title,category,status",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "title",
+ "track_changes": 1
+}

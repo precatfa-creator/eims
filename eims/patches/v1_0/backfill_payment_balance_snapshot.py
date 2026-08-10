@@ -13,6 +13,15 @@ from eims.educational_institution_management_system.doctype.eims_enrollment.eims
 
 
 def execute():
+	# Receipts recorded before payment_date existed, and the payment method the new column
+	# default invented for them — neither should be guessed on a printed receipt.
+	frappe.db.sql(
+		"update `tabEIMS Student Payment` set payment_date = date(creation) where payment_date is null"
+	)
+	# Every receipt that exists when this patch runs predates the field, so none of them
+	# actually recorded a method.
+	frappe.db.sql("update `tabEIMS Student Payment` set payment_method = null")
+
 	fees = {
 		(f.stage, f.academic_year): flt(f.amount)
 		for f in frappe.get_all("EIMS Stage Fee", fields=["stage", "academic_year", "amount"])
