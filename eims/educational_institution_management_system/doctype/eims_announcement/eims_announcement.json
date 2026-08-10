@@ -211,7 +211,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-10 04:00:00.000000",
+ "modified": "2026-08-10 04:45:00.000000",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Announcement",
@@ -237,18 +237,6 @@
    "role": "Academic Admin",
    "share": 1,
    "write": 1
-  },
-  {
-   "read": 1,
-   "role": "Teacher"
-  },
-  {
-   "read": 1,
-   "role": "Student"
-  },
-  {
-   "read": 1,
-   "role": "Guardian"
   }
  ],
  "row_format": "Dynamic",
@@ -257,5 +245,6 @@
  "sort_order": "DESC",
  "states": [],
  "title_field": "title",
- "track_changes": 1
+ "track_changes": 1,
+ "description": "Portal visibility is resolved server-side by eims.api.announcements. Portal roles deliberately have no doctype-level read, so /api/resource cannot be used to bypass audience targeting."
 }
