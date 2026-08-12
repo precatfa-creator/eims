@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "autoname": "naming_series:",
  "creation": "2026-06-16 10:00:00",
  "default_view": "List",
@@ -232,7 +233,7 @@
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-12 03:18:19.230438",
+ "modified": "2026-08-12 03:46:39.886799",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Staff",

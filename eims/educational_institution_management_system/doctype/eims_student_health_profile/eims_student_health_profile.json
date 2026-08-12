@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "autoname": "field:student",
  "creation": "2026-08-10 02:27:03.366217",
  "doctype": "DocType",
@@ -64,7 +65,7 @@
   }
  ],
  "links": [],
- "modified": "2026-08-12 03:18:30.728294",
+ "modified": "2026-08-12 03:46:40.415794",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Student Health Profile",

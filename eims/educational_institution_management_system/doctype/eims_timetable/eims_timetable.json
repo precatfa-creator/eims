@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "autoname": "format:TT-{#####}",
  "creation": "2026-06-27 12:00:00",
  "default_view": "List",
@@ -82,7 +83,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-12 03:18:15.835879",
+ "modified": "2026-08-12 03:46:43.806116",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Timetable",

@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "autoname": "format:{academic_year}-{stage}-{subject}",
  "creation": "2026-07-10 21:29:01",
  "default_view": "List",
@@ -95,7 +96,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-12 03:18:27.478695",
+ "modified": "2026-08-12 03:46:38.299501",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Academic Curriculum",

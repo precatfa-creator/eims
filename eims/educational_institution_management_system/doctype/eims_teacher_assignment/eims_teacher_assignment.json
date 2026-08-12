@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "autoname": "hash",
  "creation": "2026-06-16 10:00:00",
  "default_view": "List",
@@ -80,7 +81,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-12 03:18:28.187735",
+ "modified": "2026-08-12 03:46:43.106989",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Teacher Assignment",
