@@ -36,7 +36,7 @@ doctype_js = {
 }
 
 fixtures = [
-	{"dt": "Role", "filters": [["doctype", "=", "Role"], ["role_name", "in", ["Academic Admin", "Teacher", "Student", "Guardian"]]]},
+	{"dt": "Role", "filters": [["role_name", "in", ["Academic Admin", "Teacher", "Student", "Guardian"]]]},
 ]
 
 # Non-desk roles land on the SPA (/school) after login instead of the desk.
