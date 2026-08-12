@@ -1,118 +1,122 @@
 {
-  "actions": [],
-  "autoname": "field:institution_name",
-  "creation": "2026-04-04 10:00:00.000000",
-  "default_view": "List",
-  "doctype": "DocType",
-  "engine": "InnoDB",
-  "field_order": [
-    "section_basic",
-    "institution_name",
-    "short_name",
-    "section_location",
-    "city",
-    "country",
-    "address",
-    "column_break_location",
-    "phone",
-    "email",
-    "section_branding",
-    "logo"
-  ],
-  "fields": [
-    {
-      "fieldname": "section_basic",
-      "fieldtype": "Section Break",
-      "label": "Basic Information"
-    },
-    {
-      "fieldname": "institution_name",
-      "fieldtype": "Data",
-      "in_list_view": 1,
-      "label": "Institution Name",
-      "reqd": 1,
-      "unique": 1
-    },
-    {
-      "fieldname": "short_name",
-      "fieldtype": "Data",
-      "label": "Short Name"
-    },
-    {
-      "fieldname": "section_location",
-      "fieldtype": "Section Break",
-      "label": "Location & Contact"
-    },
-    {
-      "fieldname": "city",
-      "fieldtype": "Data",
-      "label": "City"
-    },
-    {
-      "fieldname": "country",
-      "fieldtype": "Data",
-      "label": "Country",
-      "default": "ليبيا"
-    },
-    {
-      "fieldname": "address",
-      "fieldtype": "Small Text",
-      "label": "Address"
-    },
-    {
-      "fieldname": "column_break_location",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "phone",
-      "fieldtype": "Data",
-      "label": "Phone",
-      "options": "Phone"
-    },
-    {
-      "fieldname": "email",
-      "fieldtype": "Data",
-      "label": "Email",
-      "options": "Email"
-    },
-    {
-      "fieldname": "section_branding",
-      "fieldtype": "Section Break",
-      "label": "Branding"
-    },
-    {
-      "fieldname": "logo",
-      "fieldtype": "Attach Image",
-      "label": "Logo"
-    }
-  ],
-  "image_field": "logo",
-  "index_web_pages_for_search": 1,
-  "links": [],
-  "modified": "2026-04-04 10:00:00.000000",
-  "modified_by": "Administrator",
-  "module": "Educational Institution Management System",
-  "name": "EIMS Institution",
-  "naming_rule": "By fieldname",
-  "owner": "Administrator",
-  "permissions": [
-    {
-      "create": 1,
-      "read": 1,
-      "write": 1,
-      "delete": 1,
-      "role": "Academic Admin"
-    },
-    {
-      "read": 1,
-      "role": "Teacher"
-    },
-    {
-      "read": 1,
-      "role": "Student"
-    }
-  ],
-  "sort_field": "modified",
-  "sort_order": "DESC",
-  "states": []
+ "actions": [],
+ "autoname": "field:institution_name",
+ "creation": "2026-04-04 10:00:00",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_basic",
+  "institution_name",
+  "short_name",
+  "section_location",
+  "city",
+  "country",
+  "address",
+  "column_break_location",
+  "phone",
+  "email",
+  "section_branding",
+  "logo"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_basic",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "institution_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Institution Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "short_name",
+   "fieldtype": "Data",
+   "label": "Short Name"
+  },
+  {
+   "fieldname": "section_location",
+   "fieldtype": "Section Break",
+   "label": "Location & Contact"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "default": "\u0644\u064a\u0628\u064a\u0627",
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "column_break_location",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "section_branding",
+   "fieldtype": "Section Break",
+   "label": "Branding"
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo"
+  }
+ ],
+ "image_field": "logo",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-12 03:18:29.296990",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Institution",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Academic Admin",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  },
+  {
+   "read": 1,
+   "role": "Student"
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

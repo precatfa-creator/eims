@@ -1,6 +1,6 @@
 {
  "actions": [],
- "creation": "2026-06-27 12:00:00.000000",
+ "creation": "2026-06-27 12:00:00",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -122,19 +122,23 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Grade",
-   "options": "\nممتاز\nجيد جداً\nجيد\nمقبول\nضعيف"
+   "options": "\n\u0645\u0645\u062a\u0627\u0632\n\u062c\u064a\u062f \u062c\u062f\u0627\u064b\n\u062c\u064a\u062f\n\u0645\u0642\u0628\u0648\u0644\n\u0636\u0639\u064a\u0641"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-06-27 12:00:00.000000",
+ "modified": "2026-08-12 03:18:26.713293",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Result Subject",
  "owner": "Administrator",
  "permissions": [],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

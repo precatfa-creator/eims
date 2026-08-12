@@ -1,0 +1,448 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"hdr\",\"type\":\"header\",\"data\":{\"text\":\"<b>\ud83c\udf93 Suhool Al-Ilm School Management System</b>\",\"col\":12}},{\"id\":\"sc1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Open School System\",\"col\":3}},{\"id\":\"sc2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Add Student\",\"col\":3}},{\"id\":\"sc3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Assessment\",\"col\":3}},{\"id\":\"sc4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Take Attendance\",\"col\":3}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"c1\",\"type\":\"card\",\"data\":{\"card_name\":\"\ud83d\udc65 Students and Enrollment\",\"col\":4}},{\"id\":\"c2\",\"type\":\"card\",\"data\":{\"card_name\":\"\ud83d\udcda Academic Operations\",\"col\":4}},{\"id\":\"c3\",\"type\":\"card\",\"data\":{\"card_name\":\"\ud83e\uddd1\u200d\ud83c\udfeb People and Communication\",\"col\":4}},{\"id\":\"c4\",\"type\":\"card\",\"data\":{\"card_name\":\"\ud83c\udf31 Student Welfare and Activities\",\"col\":4}},{\"id\":\"c5\",\"type\":\"card\",\"data\":{\"card_name\":\"\ud83c\udfdb\ufe0f Academic Structure\",\"col\":4}},{\"id\":\"c6\",\"type\":\"card\",\"data\":{\"card_name\":\"\u2699\ufe0f Administration and Finance\",\"col\":4}}]",
+ "creation": "2026-08-10 03:40:28.724112",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "education",
+ "idx": 0,
+ "indicator_color": "orange",
+ "is_hidden": 0,
+ "label": "EIMS",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "\ud83d\udc65 Students and Enrollment",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "icon": "student",
+   "is_query_report": 0,
+   "label": "Students",
+   "link_count": 0,
+   "link_to": "EIMS Student",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "add-user",
+   "is_query_report": 0,
+   "label": "Enrollments",
+   "link_count": 0,
+   "link_to": "EIMS Enrollment",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "money-coins-alt",
+   "is_query_report": 0,
+   "label": "Student Payments",
+   "link_count": 0,
+   "link_to": "EIMS Student Payment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "\ud83d\udcda Academic Operations",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "icon": "form",
+   "is_query_report": 0,
+   "label": "Assessments",
+   "link_count": 0,
+   "link_to": "EIMS Assessment",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "book-open",
+   "is_query_report": 0,
+   "label": "Academic Curriculum",
+   "link_count": 0,
+   "link_to": "EIMS Academic Curriculum",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "score",
+   "is_query_report": 0,
+   "label": "Results",
+   "link_count": 0,
+   "link_to": "EIMS Result",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "calendar",
+   "is_query_report": 0,
+   "label": "Student Attendance",
+   "link_count": 0,
+   "link_to": "EIMS Student Attendance",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "calendar",
+   "is_query_report": 0,
+   "label": "Timetables",
+   "link_count": 0,
+   "link_to": "EIMS Timetable",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "check",
+   "is_query_report": 0,
+   "label": "Daily Accomplishments",
+   "link_count": 0,
+   "link_to": "EIMS Daily Accomplishment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "\ud83e\uddd1\u200d\ud83c\udfeb People and Communication",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "icon": "users",
+   "is_query_report": 0,
+   "label": "Staff and Teachers",
+   "link_count": 0,
+   "link_to": "EIMS Staff",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "assign",
+   "is_query_report": 0,
+   "label": "Teacher Subject Assignments",
+   "link_count": 0,
+   "link_to": "EIMS Teacher Assignment",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "calendar",
+   "is_query_report": 0,
+   "label": "Staff Academic Assignments",
+   "link_count": 0,
+   "link_to": "EIMS Staff Academic Assignment",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "user",
+   "is_query_report": 0,
+   "label": "Guardians",
+   "link_count": 0,
+   "link_to": "EIMS Guardian",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "calendar",
+   "is_query_report": 0,
+   "label": "Staff Attendance",
+   "link_count": 0,
+   "link_to": "EIMS Staff Attendance",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "comment",
+   "is_query_report": 0,
+   "label": "Requests",
+   "link_count": 0,
+   "link_to": "EIMS Request",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "\ud83c\udf31 Student Welfare and Activities",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "icon": "warning",
+   "is_query_report": 0,
+   "label": "Disciplinary Actions",
+   "link_count": 0,
+   "link_to": "EIMS Disciplinary Action",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "event",
+   "is_query_report": 0,
+   "label": "School Activities",
+   "link_count": 0,
+   "link_to": "EIMS School Activity",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "\ud83c\udfdb\ufe0f Academic Structure",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "icon": "hierarchy",
+   "is_query_report": 0,
+   "label": "Academic Stages",
+   "link_count": 0,
+   "link_to": "EIMS Stage",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "branch",
+   "is_query_report": 0,
+   "label": "Sections",
+   "link_count": 0,
+   "link_to": "EIMS Section",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "book",
+   "is_query_report": 0,
+   "label": "Subjects",
+   "link_count": 0,
+   "link_to": "EIMS Subject",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "\u2699\ufe0f Administration and Finance",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "icon": "calendar",
+   "is_query_report": 0,
+   "label": "Academic Years",
+   "link_count": 0,
+   "link_to": "EIMS Academic Year",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "money-coins-alt",
+   "is_query_report": 0,
+   "label": "Stage Fees",
+   "link_count": 0,
+   "link_to": "EIMS Stage Fee",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "home",
+   "is_query_report": 0,
+   "label": "School Information",
+   "link_count": 0,
+   "link_to": "EIMS Institution",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "flag",
+   "is_query_report": 0,
+   "label": "Nationalities",
+   "link_count": 0,
+   "link_to": "EIMS Nationality",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Student Welfare and Records",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "icon": "heart",
+   "is_query_report": 0,
+   "label": "Student Health Profiles",
+   "link_count": 0,
+   "link_to": "EIMS Student Health Profile",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "event",
+   "is_query_report": 0,
+   "label": "Activity Consents",
+   "link_count": 0,
+   "link_to": "EIMS Activity Consent",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "School Operations and Correspondence",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "icon": "announcement",
+   "is_query_report": 0,
+   "label": "Announcements & News",
+   "link_count": 0,
+   "link_to": "EIMS Announcement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "calendar",
+   "is_query_report": 0,
+   "label": "Morning Assemblies",
+   "link_count": 0,
+   "link_to": "EIMS Morning Assembly",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "mail",
+   "is_query_report": 0,
+   "label": "Official Correspondence",
+   "link_count": 0,
+   "link_to": "EIMS Official Correspondence",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-08-10 04:30:00",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 3.0,
+ "shortcuts": [
+  {
+   "color": "Orange",
+   "icon": "link",
+   "label": "Open School System",
+   "type": "URL",
+   "url": "/school"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "New",
+   "icon": "add-user",
+   "label": "Add Student",
+   "link_to": "EIMS Student",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "New",
+   "icon": "form",
+   "label": "New Assessment",
+   "link_to": "EIMS Assessment",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "doc_view": "New",
+   "icon": "calendar",
+   "label": "Take Attendance",
+   "link_to": "EIMS Student Attendance",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "EIMS"
+}

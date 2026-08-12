@@ -1,1 +1,94 @@
-{"autoname":"field:student","doctype":"DocType","module":"Educational Institution Management System","name":"EIMS Student Health Profile","field_order":["section_health","student","has_health_condition","health_condition","section_emergency","emergency_contact","emergency_phone","notes"],"fields":[{"fieldname":"section_health","fieldtype":"Section Break","label":"Health Information"},{"fieldname":"student","fieldtype":"Link","label":"Student","options":"EIMS Student","reqd":1,"unique":1},{"fieldname":"has_health_condition","fieldtype":"Check","label":"Has Health Condition"},{"fieldname":"health_condition","fieldtype":"Small Text","label":"Health or Psychological Condition","depends_on":"has_health_condition"},{"fieldname":"section_emergency","fieldtype":"Section Break","label":"Emergency Contact & Notes"},{"fieldname":"emergency_contact","fieldtype":"Data","label":"Emergency Contact"},{"fieldname":"emergency_phone","fieldtype":"Data","label":"Emergency Phone","options":"Phone"},{"fieldname":"notes","fieldtype":"Small Text","label":"Confidential Notes"}],"permissions":[{"role":"System Manager","read":1,"write":1,"create":1,"delete":1},{"role":"Academic Admin","read":1,"write":1,"create":1}],"sort_field":"modified","sort_order":"DESC"}
+{
+ "actions": [],
+ "autoname": "field:student",
+ "creation": "2026-08-10 02:27:03.366217",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_health",
+  "student",
+  "has_health_condition",
+  "health_condition",
+  "section_emergency",
+  "emergency_contact",
+  "emergency_phone",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_health",
+   "fieldtype": "Section Break",
+   "label": "Health Information"
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "EIMS Student",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "has_health_condition",
+   "fieldtype": "Check",
+   "label": "Has Health Condition"
+  },
+  {
+   "depends_on": "has_health_condition",
+   "fieldname": "health_condition",
+   "fieldtype": "Small Text",
+   "label": "Health or Psychological Condition"
+  },
+  {
+   "fieldname": "section_emergency",
+   "fieldtype": "Section Break",
+   "label": "Emergency Contact & Notes"
+  },
+  {
+   "fieldname": "emergency_contact",
+   "fieldtype": "Data",
+   "label": "Emergency Contact"
+  },
+  {
+   "fieldname": "emergency_phone",
+   "fieldtype": "Data",
+   "label": "Emergency Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Confidential Notes"
+  }
+ ],
+ "links": [],
+ "modified": "2026-08-12 03:18:30.728294",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Student Health Profile",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Academic Admin",
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

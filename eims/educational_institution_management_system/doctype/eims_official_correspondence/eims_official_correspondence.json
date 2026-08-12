@@ -1,10 +1,9 @@
 {
  "actions": [],
  "autoname": "format:COR-{#####}",
+ "creation": "2026-08-10 02:26:56.810082",
  "doctype": "DocType",
- "module": "Educational Institution Management System",
- "name": "EIMS Official Correspondence",
- "is_submittable": 1,
+ "engine": "InnoDB",
  "field_order": [
   "section_details",
   "direction",
@@ -17,7 +16,8 @@
   "status",
   "section_content",
   "content",
-  "attachment"
+  "attachment",
+  "amended_from"
  ],
  "fields": [
   {
@@ -28,23 +28,23 @@
   {
    "fieldname": "direction",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Direction",
    "options": "Outgoing\nIncoming",
-   "reqd": 1,
-   "in_list_view": 1
+   "reqd": 1
   },
   {
    "fieldname": "correspondence_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Date",
-   "reqd": 1,
-   "in_list_view": 1
+   "reqd": 1
   },
   {
    "fieldname": "reference_number",
    "fieldtype": "Data",
-   "label": "Reference Number",
-   "in_list_view": 1
+   "in_list_view": 1,
+   "label": "Reference Number"
   },
   {
    "fieldname": "recipient",
@@ -59,9 +59,9 @@
   {
    "fieldname": "subject",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Subject",
-   "reqd": 1,
-   "in_list_view": 1
+   "reqd": 1
   },
   {
    "fieldname": "academic_year",
@@ -70,11 +70,11 @@
    "options": "EIMS Academic Year"
   },
   {
+   "default": "Draft",
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Draft\nSent\nReceived\nClosed",
-   "default": "Draft"
+   "options": "Draft\nSent\nReceived\nClosed"
   },
   {
    "fieldname": "section_content",
@@ -90,26 +90,48 @@
    "fieldname": "attachment",
    "fieldtype": "Attach",
    "label": "Attachment"
-  }
- ],
- "permissions": [
-  {
-   "role": "System Manager",
-   "read": 1,
-   "write": 1,
-   "create": 1,
-   "submit": 1,
-   "cancel": 1
   },
   {
-   "role": "Academic Admin",
-   "read": 1,
-   "write": 1,
-   "create": 1,
-   "submit": 1,
-   "cancel": 1
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "EIMS Official Correspondence",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-08-12 03:18:27.842821",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Official Correspondence",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "read": 1,
+   "role": "System Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "read": 1,
+   "role": "Academic Admin",
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

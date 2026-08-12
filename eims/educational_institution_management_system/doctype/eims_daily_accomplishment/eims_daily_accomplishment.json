@@ -1,6 +1,8 @@
 {
  "actions": [],
- "creation": "2026-06-27 12:00:00.000000",
+ "autoname": "format:DACC-{#####}",
+ "creation": "2026-06-27 12:00:00",
+ "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -17,7 +19,8 @@
   "homework",
   "notes",
   "section_break_lessons",
-  "lessons"
+  "lessons",
+  "amended_from"
  ],
  "fields": [
   {
@@ -28,17 +31,17 @@
   {
    "fieldname": "log_date",
    "fieldtype": "Date",
-   "label": "Log Date",
-   "reqd": 1,
    "in_list_view": 1,
-   "in_standard_filter": 1
+   "in_standard_filter": 1,
+   "label": "Log Date",
+   "reqd": 1
   },
   {
    "fieldname": "section",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Section",
-   "options": "EIMS Section",
-   "in_standard_filter": 1
+   "options": "EIMS Section"
   },
   {
    "fetch_from": "subject.stage",
@@ -51,14 +54,13 @@
   {
    "fieldname": "teacher",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Teacher",
-   "options": "EIMS Staff",
-   "in_standard_filter": 1
+   "options": "EIMS Staff"
   },
   {
    "fieldname": "column_break_da1",
-   "fieldtype": "Column Break",
-   "label": ""
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "academic_year",
@@ -104,47 +106,59 @@
    "fieldtype": "Table",
    "label": "Lessons",
    "options": "EIMS Daily Lesson"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "EIMS Daily Accomplishment",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-06-27 12:00:00.000000",
+ "modified": "2026-08-12 03:18:30.040386",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Daily Accomplishment",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
-   "create": 1,
    "cancel": 1,
+   "create": 1,
    "delete": 1,
    "read": 1,
-   "write": 1,
    "role": "System Manager",
-   "submit": 1
+   "submit": 1,
+   "write": 1
   },
   {
-   "create": 1,
    "cancel": 1,
+   "create": 1,
    "delete": 1,
    "read": 1,
-   "write": 1,
    "role": "Academic Admin",
-   "submit": 1
+   "submit": 1,
+   "write": 1
   },
   {
    "create": 1,
    "read": 1,
-   "write": 1,
    "role": "Teacher",
-   "submit": 1
+   "submit": 1,
+   "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "default_view": "List",
- "autoname": "format:DACC-{#####}",
- "naming_rule": "Expression"
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

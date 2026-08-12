@@ -80,7 +80,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-17 04:26:59.491262",
+ "modified": "2026-08-12 03:18:28.187735",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Teacher Assignment",
@@ -111,5 +111,8 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "staff"
+ "title_field": "staff",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

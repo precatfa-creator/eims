@@ -1,7 +1,7 @@
 {
  "actions": [],
  "autoname": "field:nationality_name",
- "creation": "2026-06-16 14:00:00.000000",
+ "creation": "2026-06-16 14:00:00",
  "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -27,7 +27,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-16 14:00:00.000000",
+ "modified": "2026-08-12 03:18:22.362509",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Nationality",
@@ -57,7 +57,11 @@
    "role": "Student"
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "nationality_name",
  "sort_order": "ASC",
- "states": []
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

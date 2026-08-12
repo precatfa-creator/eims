@@ -1,6 +1,8 @@
 {
  "actions": [],
- "creation": "2026-06-27 12:00:00.000000",
+ "autoname": "format:GRD-{#####}",
+ "creation": "2026-06-27 12:00:00",
+ "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -32,15 +34,15 @@
   {
    "fieldname": "guardian_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Guardian Name",
-   "reqd": 1,
-   "in_list_view": 1
+   "reqd": 1
   },
   {
    "fieldname": "relation",
    "fieldtype": "Select",
    "label": "Relation",
-   "options": "\nأب\nأم\nجد\nعم\nخال\nوصي\nأخرى"
+   "options": "\n\u0623\u0628\n\u0623\u0645\n\u062c\u062f\n\u0639\u0645\n\u062e\u0627\u0644\n\u0648\u0635\u064a\n\u0623\u062e\u0631\u0649"
   },
   {
    "fieldname": "national_id",
@@ -50,8 +52,8 @@
   {
    "fieldname": "phone",
    "fieldtype": "Data",
-   "label": "Phone",
-   "in_list_view": 1
+   "in_list_view": 1,
+   "label": "Phone"
   },
   {
    "fieldname": "column_break_basic",
@@ -123,35 +125,37 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-27 12:00:00.000000",
+ "modified": "2026-08-12 03:18:17.421253",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Guardian",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
    "create": 1,
    "delete": 1,
    "read": 1,
-   "write": 1,
-   "role": "System Manager"
+   "role": "System Manager",
+   "write": 1
   },
   {
    "create": 1,
    "delete": 1,
    "read": 1,
-   "write": 1,
-   "role": "Academic Admin"
+   "role": "Academic Admin",
+   "write": 1
   },
   {
    "read": 1,
    "role": "Teacher"
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "default_view": "List",
- "autoname": "format:GRD-{#####}",
- "naming_rule": "Expression"
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

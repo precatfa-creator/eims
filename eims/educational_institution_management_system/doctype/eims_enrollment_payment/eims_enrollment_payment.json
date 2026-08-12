@@ -1,8 +1,7 @@
 {
  "actions": [],
- "creation": "2026-08-10 00:00:00.000000",
+ "creation": "2026-08-10 00:00:00",
  "doctype": "DocType",
- "editable_grid": 0,
  "engine": "InnoDB",
  "field_order": [
   "installment_no",
@@ -80,13 +79,17 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-08-11 00:00:00.000000",
+ "modified": "2026-08-12 03:18:34.416443",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Enrollment Payment",
  "owner": "Administrator",
  "permissions": [],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

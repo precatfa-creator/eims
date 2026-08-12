@@ -1,7 +1,7 @@
 {
  "actions": [],
  "autoname": "format:RES-{student}-{academic_year}",
- "creation": "2026-06-27 12:00:00.000000",
+ "creation": "2026-06-27 12:00:00",
  "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -28,7 +28,8 @@
   "pass_percentage",
   "overall_grade",
   "section_notes",
-  "notes"
+  "notes",
+  "amended_from"
  ],
  "fields": [
   {
@@ -81,13 +82,13 @@
    "fieldtype": "Column Break"
   },
   {
-   "description": "للمرحلة الإعدادية",
+   "description": "\u0644\u0644\u0645\u0631\u062d\u0644\u0629 \u0627\u0644\u0625\u0639\u062f\u0627\u062f\u064a\u0629",
    "fieldname": "seat_number",
    "fieldtype": "Data",
    "label": "Seat Number"
   },
   {
-   "description": "للمرحلة الإعدادية",
+   "description": "\u0644\u0644\u0645\u0631\u062d\u0644\u0629 \u0627\u0644\u0625\u0639\u062f\u0627\u062f\u064a\u0629",
    "fieldname": "secret_number",
    "fieldtype": "Data",
    "label": "Secret Number"
@@ -98,13 +99,13 @@
    "label": "Overall Rank"
   },
   {
-   "default": "مسودة",
+   "default": "\u0645\u0633\u0648\u062f\u0629",
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "مسودة\nناجح ومنقول\nمرحّل\nدور ثاني\nراسب\nغائب"
+   "options": "\u0645\u0633\u0648\u062f\u0629\n\u0646\u0627\u062c\u062d \u0648\u0645\u0646\u0642\u0648\u0644\n\u0645\u0631\u062d\u0651\u0644\n\u062f\u0648\u0631 \u062b\u0627\u0646\u064a\n\u0631\u0627\u0633\u0628\n\u063a\u0627\u0626\u0628"
   },
   {
    "fieldname": "tab_results",
@@ -157,7 +158,7 @@
    "fieldname": "overall_grade",
    "fieldtype": "Select",
    "label": "Overall Grade",
-   "options": "\nممتاز\nجيد جداً\nجيد\nمقبول\nضعيف"
+   "options": "\n\u0645\u0645\u062a\u0627\u0632\n\u062c\u064a\u062f \u062c\u062f\u0627\u064b\n\u062c\u064a\u062f\n\u0645\u0642\u0628\u0648\u0644\n\u0636\u0639\u064a\u0641"
   },
   {
    "fieldname": "section_notes",
@@ -168,12 +169,22 @@
    "fieldname": "notes",
    "fieldtype": "Small Text",
    "label": "Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "EIMS Result",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-06-27 12:00:00.000000",
+ "modified": "2026-08-12 03:18:25.820904",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Result",
@@ -203,7 +214,11 @@
    "role": "Teacher"
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

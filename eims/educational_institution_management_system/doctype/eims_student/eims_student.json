@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "format:{enrollment_number}",
+ "autoname": "naming_series:",
  "creation": "2026-04-04 10:00:00",
  "default_view": "List",
  "doctype": "DocType",
@@ -16,6 +16,7 @@
   "date_of_birth",
   "place_of_birth",
   "gender",
+  "naming_series",
   "section_nationality",
   "nationality",
   "column_break_passport",
@@ -78,7 +79,6 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Enrollment Number",
-   "reqd": 1,
    "unique": 1
   },
   {
@@ -249,16 +249,23 @@
    "fieldtype": "Table",
    "label": "Previous Records",
    "options": "EIMS Student Previous Record"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "EIMS-STU-.YYYY.-"
   }
  ],
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-10 02:28:43.344965",
+ "modified": "2026-08-12 03:18:21.654798",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Student",
- "naming_rule": "Expression",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -289,5 +296,8 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "student_name"
+ "title_field": "student_name",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

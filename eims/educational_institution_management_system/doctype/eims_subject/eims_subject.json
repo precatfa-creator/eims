@@ -1,7 +1,7 @@
 {
  "actions": [],
  "autoname": "format:{stage}-{subject_name}",
- "creation": "2026-04-04 10:00:00.000000",
+ "creation": "2026-04-04 10:00:00",
  "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -57,12 +57,12 @@
    "fieldtype": "Select",
    "in_standard_filter": 1,
    "label": "Subject Type",
-   "options": "\nنظري\nعملي"
+   "options": "\n\u0646\u0638\u0631\u064a\n\u0639\u0645\u0644\u064a"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-16 10:00:00.000000",
+ "modified": "2026-08-12 03:18:25.440212",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Subject",
@@ -92,7 +92,11 @@
    "role": "Student"
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

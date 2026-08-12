@@ -1,7 +1,7 @@
 {
  "actions": [],
  "autoname": "format:PAY-{#####}",
- "creation": "2026-06-16 10:00:00.000000",
+ "creation": "2026-06-16 10:00:00",
  "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -24,7 +24,8 @@
   "previously_paid",
   "column_break_balance",
   "balance_after",
-  "payment_summary"
+  "payment_summary",
+  "amended_from"
  ],
  "fields": [
   {
@@ -62,12 +63,12 @@
    "read_only": 1
   },
   {
+   "description": "Order of this payment for the enrollment: 1 = first instalment, 2 = second, and so on.",
    "fieldname": "installment_no",
    "fieldtype": "Int",
    "label": "Installment No.",
-   "description": "Order of this payment for the enrollment: 1 = first instalment, 2 = second, and so on.",
-   "read_only": 1,
-   "no_copy": 1
+   "no_copy": 1,
+   "read_only": 1
   },
   {
    "fieldname": "section_payment",
@@ -91,22 +92,22 @@
    "reqd": 1
   },
   {
-   "default": "نقداً",
+   "default": "\u0646\u0642\u062f\u0627\u064b",
    "fieldname": "payment_method",
    "fieldtype": "Select",
    "in_standard_filter": 1,
    "label": "Payment Method",
-   "options": "نقداً\nتحويل بنكي\nشيك\nبطاقة"
+   "options": "\u0646\u0642\u062f\u0627\u064b\n\u062a\u062d\u0648\u064a\u0644 \u0628\u0646\u0643\u064a\n\u0634\u064a\u0643\n\u0628\u0637\u0627\u0642\u0629"
   },
   {
    "fieldname": "column_break_payment",
    "fieldtype": "Column Break"
   },
   {
+   "description": "Cheque, transfer or receipt reference, when there is one.",
    "fieldname": "reference_no",
    "fieldtype": "Data",
-   "label": "Reference No.",
-   "description": "Cheque, transfer or receipt reference, when there is one."
+   "label": "Reference No."
   },
   {
    "fieldname": "notes",
@@ -122,15 +123,15 @@
    "fieldname": "total_fee",
    "fieldtype": "Currency",
    "label": "Total Fee",
-   "read_only": 1,
-   "no_copy": 1
+   "no_copy": 1,
+   "read_only": 1
   },
   {
    "fieldname": "previously_paid",
    "fieldtype": "Currency",
    "label": "Paid Before This Payment",
-   "read_only": 1,
-   "no_copy": 1
+   "no_copy": 1,
+   "read_only": 1
   },
   {
    "fieldname": "column_break_balance",
@@ -141,21 +142,31 @@
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Remaining After This Payment",
-   "read_only": 1,
-   "no_copy": 1
+   "no_copy": 1,
+   "read_only": 1
   },
   {
    "fieldname": "payment_summary",
    "fieldtype": "Data",
    "label": "Payment Summary",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "EIMS Student Payment",
+   "print_hide": 1,
    "read_only": 1,
-   "no_copy": 1
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
  "is_submittable": 1,
- "modified": "2026-08-10 00:00:00.000000",
+ "links": [],
+ "modified": "2026-08-12 03:18:31.087785",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Student Payment",
@@ -163,8 +174,8 @@
  "owner": "Administrator",
  "permissions": [
   {
-   "create": 1,
    "cancel": 1,
+   "create": 1,
    "delete": 1,
    "read": 1,
    "role": "System Manager",
@@ -172,8 +183,8 @@
    "write": 1
   },
   {
-   "create": 1,
    "cancel": 1,
+   "create": 1,
    "delete": 1,
    "read": 1,
    "role": "Academic Admin",
@@ -181,8 +192,12 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "student"
+ "title_field": "student",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

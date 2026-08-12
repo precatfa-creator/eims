@@ -1,6 +1,8 @@
 {
  "actions": [],
- "creation": "2026-06-27 12:00:00.000000",
+ "autoname": "format:SATT-{#####}",
+ "creation": "2026-06-27 12:00:00",
+ "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -14,7 +16,8 @@
   "teacher",
   "notes",
   "section_break_at2",
-  "rows"
+  "rows",
+  "amended_from"
  ],
  "fields": [
   {
@@ -25,29 +28,29 @@
   {
    "fieldname": "attendance_date",
    "fieldtype": "Date",
-   "label": "Attendance Date",
-   "reqd": 1,
    "in_list_view": 1,
-   "in_standard_filter": 1
+   "in_standard_filter": 1,
+   "label": "Attendance Date",
+   "reqd": 1
   },
   {
    "fieldname": "section",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Section",
    "options": "EIMS Section",
-   "reqd": 1,
-   "in_list_view": 1,
-   "in_standard_filter": 1
+   "reqd": 1
   },
   {
    "fetch_from": "section.stage",
    "fieldname": "stage",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Stage",
    "options": "EIMS Stage",
    "read_only": 1,
-   "reqd": 1,
-   "in_standard_filter": 1
+   "reqd": 1
   },
   {
    "fieldname": "subject",
@@ -57,23 +60,22 @@
   },
   {
    "fieldname": "column_break_at1",
-   "fieldtype": "Column Break",
-   "label": ""
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "academic_year",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Academic Year",
    "options": "EIMS Academic Year",
-   "reqd": 1,
-   "in_standard_filter": 1
+   "reqd": 1
   },
   {
    "fieldname": "teacher",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Teacher",
-   "options": "EIMS Staff",
-   "in_standard_filter": 1
+   "options": "EIMS Staff"
   },
   {
    "fieldname": "notes",
@@ -90,47 +92,59 @@
    "fieldtype": "Table",
    "label": "Rows",
    "options": "EIMS Student Attendance Row"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "EIMS Student Attendance",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-06-27 12:00:00.000000",
+ "modified": "2026-08-12 03:18:18.452866",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Student Attendance",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
-   "create": 1,
    "cancel": 1,
+   "create": 1,
    "delete": 1,
    "read": 1,
-   "write": 1,
-   "role": "System Manager"
-   ,"submit": 1
+   "role": "System Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Academic Admin",
+   "submit": 1,
+   "write": 1
   },
   {
    "create": 1,
-   "cancel": 1,
-   "delete": 1,
    "read": 1,
-   "write": 1,
-   "role": "Academic Admin"
-   ,"submit": 1
-  },
-  {
-   "create": 1,
-   "read": 1,
-   "write": 1,
    "role": "Teacher",
-   "submit": 1
+   "submit": 1,
+   "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "default_view": "List",
- "autoname": "format:SATT-{#####}",
- "naming_rule": "Expression"
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

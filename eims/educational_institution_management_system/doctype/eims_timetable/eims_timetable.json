@@ -1,6 +1,8 @@
 {
  "actions": [],
- "creation": "2026-06-27 12:00:00.000000",
+ "autoname": "format:TT-{#####}",
+ "creation": "2026-06-27 12:00:00",
+ "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -24,24 +26,24 @@
   {
    "fieldname": "title",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Title",
-   "reqd": 1,
-   "in_list_view": 1
+   "reqd": 1
   },
   {
    "fieldname": "staff",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Staff",
-   "options": "EIMS Staff",
-   "in_standard_filter": 1
+   "options": "EIMS Staff"
   },
   {
    "fieldname": "academic_year",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Academic Year",
    "options": "EIMS Academic Year",
-   "reqd": 1,
-   "in_standard_filter": 1
+   "reqd": 1
   },
   {
    "fieldname": "term",
@@ -50,8 +52,7 @@
   },
   {
    "fieldname": "column_break_t1",
-   "fieldtype": "Column Break",
-   "label": ""
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "section",
@@ -81,37 +82,39 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-27 12:00:00.000000",
+ "modified": "2026-08-12 03:18:15.835879",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Timetable",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
    "create": 1,
    "delete": 1,
    "read": 1,
-   "write": 1,
-   "role": "System Manager"
+   "role": "System Manager",
+   "write": 1
   },
   {
    "create": 1,
    "delete": 1,
    "read": 1,
-   "write": 1,
-   "role": "Academic Admin"
+   "role": "Academic Admin",
+   "write": 1
   },
   {
    "create": 1,
    "read": 1,
-   "write": 1,
-   "role": "Teacher"
+   "role": "Teacher",
+   "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "default_view": "List",
- "autoname": "format:TT-{#####}",
- "naming_rule": "Expression"
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

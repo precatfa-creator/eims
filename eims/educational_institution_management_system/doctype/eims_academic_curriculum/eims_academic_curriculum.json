@@ -1,7 +1,7 @@
 {
  "actions": [],
  "autoname": "format:{academic_year}-{stage}-{subject}",
- "creation": "2026-07-10 21:29:01.000000",
+ "creation": "2026-07-10 21:29:01",
  "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -95,7 +95,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-10 21:29:01.000000",
+ "modified": "2026-08-12 03:18:27.478695",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Academic Curriculum",
@@ -106,23 +106,27 @@
    "create": 1,
    "delete": 1,
    "read": 1,
-   "write": 1,
-   "role": "System Manager"
+   "role": "System Manager",
+   "write": 1
   },
   {
    "create": 1,
    "delete": 1,
    "read": 1,
-   "write": 1,
-   "role": "Academic Admin"
+   "role": "Academic Admin",
+   "write": 1
   },
   {
    "read": 1,
    "role": "Teacher"
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "subject_name"
+ "title_field": "subject_name",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

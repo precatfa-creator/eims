@@ -1,10 +1,9 @@
 {
  "actions": [],
  "autoname": "format:CON-{#####}",
+ "creation": "2026-08-10 02:26:54.577662",
  "doctype": "DocType",
- "module": "Educational Institution Management System",
- "name": "EIMS Activity Consent",
- "is_submittable": 1,
+ "engine": "InnoDB",
  "field_order": [
   "section_activity",
   "activity",
@@ -18,7 +17,8 @@
   "decision_date",
   "column_break_decision",
   "signature",
-  "notes"
+  "notes",
+  "amended_from"
  ],
  "fields": [
   {
@@ -29,18 +29,18 @@
   {
    "fieldname": "activity",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "School Activity",
    "options": "EIMS School Activity",
-   "reqd": 1,
-   "in_list_view": 1
+   "reqd": 1
   },
   {
    "fieldname": "student",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Student",
    "options": "EIMS Student",
-   "reqd": 1,
-   "in_list_view": 1
+   "reqd": 1
   },
   {
    "fieldname": "section_guardian",
@@ -54,17 +54,17 @@
    "options": "EIMS Guardian"
   },
   {
+   "fetch_from": "guardian.guardian_name",
    "fieldname": "guardian_name",
    "fieldtype": "Data",
    "label": "Guardian Name",
-   "fetch_from": "guardian.guardian_name",
    "read_only": 1
   },
   {
+   "fetch_from": "guardian.phone",
    "fieldname": "guardian_phone",
    "fieldtype": "Data",
    "label": "Guardian Phone",
-   "fetch_from": "guardian.phone",
    "read_only": 1
   },
   {
@@ -73,11 +73,11 @@
    "label": "Decision"
   },
   {
+   "default": "Pending",
    "fieldname": "decision",
    "fieldtype": "Select",
    "label": "Decision",
    "options": "Pending\nApproved\nRejected",
-   "default": "Pending",
    "reqd": 1
   },
   {
@@ -98,26 +98,48 @@
    "fieldname": "notes",
    "fieldtype": "Small Text",
    "label": "Notes"
-  }
- ],
- "permissions": [
-  {
-   "role": "System Manager",
-   "read": 1,
-   "write": 1,
-   "create": 1,
-   "submit": 1,
-   "cancel": 1
   },
   {
-   "role": "Academic Admin",
-   "read": 1,
-   "write": 1,
-   "create": 1,
-   "submit": 1,
-   "cancel": 1
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "EIMS Activity Consent",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-08-12 03:18:24.969357",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Activity Consent",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "read": 1,
+   "role": "System Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "read": 1,
+   "role": "Academic Admin",
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

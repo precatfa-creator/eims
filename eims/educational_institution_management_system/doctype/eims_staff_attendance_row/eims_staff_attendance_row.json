@@ -1,7 +1,8 @@
 {
  "actions": [],
- "creation": "2026-06-27 12:00:00.000000",
+ "creation": "2026-06-27 12:00:00",
  "doctype": "DocType",
+ "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "staff",
@@ -13,30 +14,30 @@
  ],
  "fields": [
   {
+   "columns": 3,
    "fieldname": "staff",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Staff",
    "options": "EIMS Staff",
-   "reqd": 1,
-   "in_list_view": 1,
-   "columns": 3
+   "reqd": 1
   },
   {
+   "fetch_from": "staff.name_ar",
    "fieldname": "staff_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Staff Name",
-   "fetch_from": "staff.name_ar",
-   "read_only": 1,
-   "in_list_view": 1
+   "read_only": 1
   },
   {
+   "columns": 2,
+   "default": "\u062d\u0627\u0636\u0631",
    "fieldname": "status",
    "fieldtype": "Select",
-   "label": "Status",
-   "options": "حاضر\nغائب\nمتأخر\nإجازة",
-   "default": "حاضر",
    "in_list_view": 1,
-   "columns": 2
+   "label": "Status",
+   "options": "\u062d\u0627\u0636\u0631\n\u063a\u0627\u0626\u0628\n\u0645\u062a\u0623\u062e\u0631\n\u0625\u062c\u0627\u0632\u0629"
   },
   {
    "fieldname": "check_in",
@@ -55,16 +56,19 @@
   }
  ],
  "index_web_pages_for_search": 1,
+ "istable": 1,
  "links": [],
- "modified": "2026-06-27 12:00:00.000000",
+ "modified": "2026-08-12 03:18:20.985551",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Staff Attendance Row",
  "owner": "Administrator",
  "permissions": [],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "istable": 1,
- "editable_grid": 1
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }
