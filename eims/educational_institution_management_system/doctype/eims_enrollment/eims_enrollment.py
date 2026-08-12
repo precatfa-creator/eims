@@ -23,6 +23,21 @@ def payment_split(total_fee, paid):
 	return outstanding, PARTIALLY_PAID if outstanding else FULLY_PAID
 
 
+def submitted_payments(enrollment):
+	"""Submitted receipts for an enrollment, oldest first."""
+	if not enrollment:
+		return []
+	return frappe.get_all(
+		"EIMS Student Payment",
+		filters={"enrollment": enrollment, "docstatus": 1},
+		fields=[
+			"name", "installment_no", "payment_date", "amount_paid",
+			"payment_method", "balance_after", "reference_no", "notes",
+		],
+		order_by="payment_date asc, creation asc",
+	)
+
+
 class EIMSEnrollment(Document):
 	def validate(self):
 		self.update_payment_summary()
@@ -38,14 +53,24 @@ class EIMSEnrollment(Document):
 			{"stage": self.stage, "academic_year": self.academic_year},
 			"amount",
 		) or 0
-		self.paid_amount, self.last_payment_date = frappe.db.sql(
-			"""
-				select coalesce(sum(amount_paid), 0), max(payment_date)
-				from `tabEIMS Student Payment`
-				where enrollment = %s and docstatus = 1
-			""",
-			self.name or "",
-		)[0]
+		receipts = submitted_payments(self.name)
+		# ponytail: the history table is a copy of the receipts, rebuilt from them on every
+		# recalculation rather than kept in step by hand. Totals and rows read the same list,
+		# so the tab cannot disagree with the figures above it.
+		self.set("payment_history", [])
+		for r in receipts:
+			self.append("payment_history", {
+				"payment": r.name,
+				"installment_no": r.installment_no,
+				"payment_date": r.payment_date,
+				"amount_paid": r.amount_paid,
+				"payment_method": r.payment_method,
+				"balance_after": r.balance_after,
+				"reference_no": r.reference_no,
+				"notes": r.notes,
+			})
+		self.paid_amount = sum(flt(r.amount_paid) for r in receipts)
+		self.last_payment_date = max((r.payment_date for r in receipts if r.payment_date), default=None)
 		self.outstanding_amount, self.payment_status = payment_split(self.total_fee, self.paid_amount)
 		if self.payment_status == FULLY_PAID:
 			self.status = "مسجل"

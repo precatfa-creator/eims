@@ -1,7 +1,7 @@
 {
  "actions": [],
  "autoname": "format:{student}-{academic_year}",
- "creation": "2026-06-16 12:00:00.000000",
+ "creation": "2026-06-16 12:00:00",
  "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -21,12 +21,14 @@
   "column_break_payment",
   "outstanding_amount",
   "payment_status",
-  "last_payment_date"
+  "last_payment_date",
+  "tab_payment_history",
+  "payment_history"
  ],
  "fields": [
   {
    "fieldname": "section_enrollment",
-   "fieldtype": "Section Break",
+   "fieldtype": "Tab Break",
    "label": "Enrollment Details"
   },
   {
@@ -69,19 +71,19 @@
    "options": "EIMS Section"
   },
   {
-   "default": "مسودة",
+   "default": "\u0645\u0633\u0648\u062f\u0629",
    "fieldname": "status",
    "fieldtype": "Select",
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "مسودة\nمسجل\nمنسحب\nمنقول\nمتخرج"
+   "options": "\u0645\u0633\u0648\u062f\u0629\n\u0645\u0633\u062c\u0644\n\u0645\u0646\u0633\u062d\u0628\n\u0645\u0646\u0642\u0648\u0644\n\u0645\u062a\u062e\u0631\u062c"
   },
   {
+   "depends_on": "eval:doc.status=='\u0645\u0633\u062c\u0644' && doc.payment_status!='\u0645\u062f\u0641\u0648\u0639 \u0628\u0627\u0644\u0643\u0627\u0645\u0644'",
    "fieldname": "enrollment_override_reason",
    "fieldtype": "Small Text",
    "label": "Reason for Early Enrollment",
-   "depends_on": "eval:doc.status=='مسجل' && doc.payment_status!='مدفوع بالكامل'",
-   "mandatory_depends_on": "eval:doc.status=='مسجل' && doc.payment_status!='مدفوع بالكامل'"
+   "mandatory_depends_on": "eval:doc.status=='\u0645\u0633\u062c\u0644' && doc.payment_status!='\u0645\u062f\u0641\u0648\u0639 \u0628\u0627\u0644\u0643\u0627\u0645\u0644'"
   },
   {
    "fieldname": "enrollment_date",
@@ -118,27 +120,35 @@
   {
    "fieldname": "payment_status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Payment Status",
-   "options": "غير مدفوع\nمدفوع جزئياً\nمدفوع بالكامل",
-   "read_only": 1,
-   "in_list_view": 1
+   "options": "\u063a\u064a\u0631 \u0645\u062f\u0641\u0648\u0639\n\u0645\u062f\u0641\u0648\u0639 \u062c\u0632\u0626\u064a\u0627\u064b\n\u0645\u062f\u0641\u0648\u0639 \u0628\u0627\u0644\u0643\u0627\u0645\u0644",
+   "read_only": 1
   },
   {
    "fieldname": "last_payment_date",
    "fieldtype": "Date",
    "label": "Last Payment Date",
    "read_only": 1
+  },
+  {
+   "fieldname": "tab_payment_history",
+   "fieldtype": "Tab Break",
+   "label": "Payment History"
+  },
+  {
+   "description": "Every submitted receipt for this enrollment, oldest first. Rebuilt automatically; edit the receipts themselves to change it.",
+   "fieldname": "payment_history",
+   "fieldtype": "Table",
+   "label": "Payment History",
+   "no_copy": 1,
+   "options": "EIMS Enrollment Payment",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [
-  {
-   "group": "Fees",
-   "link_doctype": "EIMS Student Payment",
-   "link_fieldname": "enrollment"
-  }
- ],
- "modified": "2026-08-10 00:00:00.000000",
+ "links": [],
+ "modified": "2026-08-10 03:51:46.278367",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Enrollment",
@@ -164,7 +174,9 @@
    "role": "Teacher"
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "student"
 }

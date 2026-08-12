@@ -9,6 +9,7 @@ from frappe.utils import flt
 
 from eims.educational_institution_management_system.doctype.eims_enrollment.eims_enrollment import (
 	payment_split,
+	refresh_enrollment_payment_status,
 )
 
 
@@ -57,3 +58,7 @@ def execute():
 			update_modified=False,
 		)
 		running[p.enrollment] = (previously_paid + flt(p.amount_paid), count + 1)
+
+	# Fill the payment history tab on enrollments saved before the table existed.
+	for enrollment in frappe.get_all("EIMS Enrollment", pluck="name"):
+		refresh_enrollment_payment_status(enrollment)

@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "creation": "2026-08-10 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 0,
+ "engine": "InnoDB",
+ "field_order": [
+  "installment_no",
+  "payment_date",
+  "amount_paid",
+  "payment_method",
+  "balance_after",
+  "payment",
+  "reference_no",
+  "notes"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "installment_no",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Installment No.",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Payment Date",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "amount_paid",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount Paid",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "payment_method",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Payment Method",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "balance_after",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Remaining After This Payment",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "payment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Receipt",
+   "options": "EIMS Student Payment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reference_no",
+   "fieldtype": "Data",
+   "label": "Reference No.",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-11 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Enrollment Payment",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
