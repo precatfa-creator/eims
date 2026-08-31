@@ -1,7 +1,7 @@
 {
  "is_standard": 1,
  "charts": [],
- "content": "[{\"id\":\"hdr\",\"type\":\"header\",\"data\":{\"text\":\"<b>🎓 Suhool Al-Ilm School Management System</b>\",\"col\":12}},{\"id\":\"sc1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Open School System\",\"col\":3}},{\"id\":\"sc2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Add Student\",\"col\":3}},{\"id\":\"sc3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Assessment\",\"col\":3}},{\"id\":\"sc4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Take Attendance\",\"col\":3}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"c1\",\"type\":\"card\",\"data\":{\"card_name\":\"👥 Students and Enrollment\",\"col\":4}},{\"id\":\"c2\",\"type\":\"card\",\"data\":{\"card_name\":\"📚 Academic Operations\",\"col\":4}},{\"id\":\"c3\",\"type\":\"card\",\"data\":{\"card_name\":\"🧑‍🏫 People and Communication\",\"col\":4}},{\"id\":\"c4\",\"type\":\"card\",\"data\":{\"card_name\":\"🌱 Student Welfare and Activities\",\"col\":4}},{\"id\":\"c5\",\"type\":\"card\",\"data\":{\"card_name\":\"🏛️ Academic Structure\",\"col\":4}},{\"id\":\"c6\",\"type\":\"card\",\"data\":{\"card_name\":\"⚙️ Administration and Finance\",\"col\":4}}]",
+ "content": "[{\"id\": \"hdr\", \"type\": \"header\", \"data\": {\"text\": \"<b>\\ud83c\\udf93 Suhool Al-Ilm School Management System</b>\", \"col\": 12}}, {\"id\": \"sc1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Open School System\", \"col\": 3}}, {\"id\": \"sc2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Add Student\", \"col\": 3}}, {\"id\": \"sc3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New Assessment\", \"col\": 3}}, {\"id\": \"sc4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Take Attendance\", \"col\": 3}}, {\"id\": \"sp1\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"c1\", \"type\": \"card\", \"data\": {\"card_name\": \"\\ud83d\\udc65 Students and Enrollment\", \"col\": 4}}, {\"id\": \"c2\", \"type\": \"card\", \"data\": {\"card_name\": \"\\ud83d\\udcda Academic Operations\", \"col\": 4}}, {\"id\": \"c3\", \"type\": \"card\", \"data\": {\"card_name\": \"\\ud83e\\uddd1\\u200d\\ud83c\\udfeb People and Communication\", \"col\": 4}}, {\"id\": \"c4\", \"type\": \"card\", \"data\": {\"card_name\": \"\\ud83c\\udf31 Student Welfare and Activities\", \"col\": 4}}, {\"id\": \"c5\", \"type\": \"card\", \"data\": {\"card_name\": \"\\ud83c\\udfdb\\ufe0f Academic Structure\", \"col\": 4}}, {\"id\": \"c6\", \"type\": \"card\", \"data\": {\"card_name\": \"\\u2699\\ufe0f Administration and Finance\", \"col\": 4}}, {\"id\": \"student-welfare-and-\", \"type\": \"card\", \"data\": {\"card_name\": \"Student Welfare and Records\", \"col\": 4}}, {\"id\": \"school-operations-an\", \"type\": \"card\", \"data\": {\"card_name\": \"School Operations and Correspondence\", \"col\": 4}}]",
  "creation": "2026-04-04 12:00:00",
  "docstatus": 0,
  "doctype": "Workspace",
@@ -298,7 +298,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-07-10 21:56:22.000000",
+ "modified": "2026-08-31 14:40:00.000000",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS",

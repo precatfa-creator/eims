@@ -36,20 +36,20 @@
    "reqd": 1
   },
   {
-  "fieldname": "stage",
-  "fieldtype": "Link",
-  "fetch_from": "subject.stage",
-  "in_standard_filter": 1,
-  "label": "Stage",
-  "options": "EIMS Stage",
-  "read_only": 1,
-  "reqd": 1
+   "fieldname": "stage",
+   "fieldtype": "Link",
+   "fetch_from": "subject.stage",
+   "in_standard_filter": 1,
+   "label": "Stage",
+   "options": "EIMS Stage",
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "section",
    "fieldtype": "Link",
    "in_standard_filter": 1,
-   "label": "Section",
+   "label": "Class Section",
    "options": "EIMS Section"
   },
   {

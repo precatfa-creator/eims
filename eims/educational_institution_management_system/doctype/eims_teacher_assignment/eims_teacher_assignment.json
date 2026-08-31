@@ -9,6 +9,7 @@
   "staff",
   "staff_name",
   "academic_year",
+  "column_break_tea01",
   "stage",
   "section",
   "subject"
@@ -41,6 +42,10 @@
    "reqd": 1
   },
   {
+   "fieldname": "column_break_tea01",
+   "fieldtype": "Column Break"
+  },
+  {
    "fetch_from": "subject.stage",
    "fieldname": "stage",
    "fieldtype": "Link",
@@ -55,7 +60,7 @@
    "fieldname": "section",
    "fieldtype": "Link",
    "in_standard_filter": 1,
-   "label": "Section",
+   "label": "Class Section",
    "options": "EIMS Section"
   },
   {

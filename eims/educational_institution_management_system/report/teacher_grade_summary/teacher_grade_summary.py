@@ -45,7 +45,7 @@ def get_data(filters):
 				"subject": assignment.subject,
 				"academic_year": filters.get("academic_year"),
 			},
-			fields=["name", "term", "docstatus", "students"],
+			fields=["name", "term", "docstatus"],
 		)
 
 		for assessment in assessments:

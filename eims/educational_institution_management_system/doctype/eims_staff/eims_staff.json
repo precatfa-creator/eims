@@ -6,21 +6,27 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "tab_personal",
   "image",
   "name_ar",
   "name_en",
   "role",
+  "column_break_sta01",
   "gender",
-  "title_ar",
-  "title_en",
   "date_of_birth",
   "nationality",
+  "tab_contact",
   "national_id",
   "passport_number",
   "phone",
+  "column_break_sta11",
   "email",
   "address",
+  "tab_employment",
+  "title_ar",
+  "title_en",
   "qualification",
+  "column_break_sta21",
   "hire_date",
   "hired_year",
   "user_id",
@@ -28,6 +34,11 @@
   "credentials"
  ],
  "fields": [
+  {
+   "fieldname": "tab_personal",
+   "fieldtype": "Tab Break",
+   "label": "Personal Information"
+  },
   {
    "fieldname": "image",
    "fieldtype": "Attach Image",
@@ -38,7 +49,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Name (AR)",
+   "label": "Staff Name (AR)",
    "reqd": 1
   },
   {
@@ -57,23 +68,16 @@
    "reqd": 1
   },
   {
+   "fieldname": "column_break_sta01",
+   "fieldtype": "Column Break"
+  },
+  {
    "default": "male",
    "fieldname": "gender",
    "fieldtype": "Select",
    "in_standard_filter": 1,
    "label": "Gender",
    "options": "male\nfemale"
-  },
-  {
-   "fieldname": "title_ar",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Title (AR)"
-  },
-  {
-   "fieldname": "title_en",
-   "fieldtype": "Data",
-   "label": "Title (EN)"
   },
   {
    "fieldname": "date_of_birth",
@@ -87,6 +91,11 @@
    "in_standard_filter": 1,
    "label": "Nationality",
    "options": "EIMS Nationality"
+  },
+  {
+   "fieldname": "tab_contact",
+   "fieldtype": "Tab Break",
+   "label": "Identity and Contact"
   },
   {
    "depends_on": "eval:doc.nationality=='ليبيا'",
@@ -108,6 +117,10 @@
    "options": "Phone"
   },
   {
+   "fieldname": "column_break_sta11",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "email",
    "fieldtype": "Data",
    "label": "Email",
@@ -119,9 +132,29 @@
    "label": "Address"
   },
   {
+   "fieldname": "tab_employment",
+   "fieldtype": "Tab Break",
+   "label": "Employment Details"
+  },
+  {
+   "fieldname": "title_ar",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title (AR)"
+  },
+  {
+   "fieldname": "title_en",
+   "fieldtype": "Data",
+   "label": "Title (EN)"
+  },
+  {
    "fieldname": "qualification",
    "fieldtype": "Data",
    "label": "Qualification"
+  },
+  {
+   "fieldname": "column_break_sta21",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "hire_date",
@@ -143,7 +176,7 @@
   },
   {
    "fieldname": "section_break_credentials",
-   "fieldtype": "Section Break",
+   "fieldtype": "Tab Break",
    "label": "Qualifications and Certificates"
   },
   {

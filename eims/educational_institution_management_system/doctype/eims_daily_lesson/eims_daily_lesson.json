@@ -1,1 +1,67 @@
-{"doctype":"DocType","module":"Educational Institution Management System","name":"EIMS Daily Lesson","istable":1,"field_order":["period","subject","lesson_title","lesson_number","book_page","homework","participation","assessment","notes"],"fields":[{"fieldname":"period","fieldtype":"Select","label":"Period","options":"First\nSecond\nThird\nFourth\nFifth\nSixth","reqd":1},{"fieldname":"subject","fieldtype":"Link","label":"Subject","options":"EIMS Subject"},{"fieldname":"lesson_title","fieldtype":"Data","label":"Lesson Title"},{"fieldname":"lesson_number","fieldtype":"Data","label":"Lesson Number"},{"fieldname":"book_page","fieldtype":"Data","label":"Book Page"},{"fieldname":"homework","fieldtype":"Small Text","label":"Homework"},{"fieldname":"participation","fieldtype":"Data","label":"Student Participation"},{"fieldname":"assessment","fieldtype":"Data","label":"Assessment"},{"fieldname":"notes","fieldtype":"Small Text","label":"Notes"}]}
+{
+ "doctype": "DocType",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Daily Lesson",
+ "istable": 1,
+ "field_order": [
+  "period",
+  "subject",
+  "lesson_title",
+  "lesson_number",
+  "book_page",
+  "homework",
+  "participation",
+  "assessment",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "period",
+   "fieldtype": "Select",
+   "label": "Period",
+   "options": "الحصة الأولى\nالحصة الثانية\nالحصة الثالثة\nالحصة الرابعة\nالحصة الخامسة\nالحصة السادسة",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "label": "Subject",
+   "options": "EIMS Subject"
+  },
+  {
+   "fieldname": "lesson_title",
+   "fieldtype": "Data",
+   "label": "Lesson Title"
+  },
+  {
+   "fieldname": "lesson_number",
+   "fieldtype": "Data",
+   "label": "Lesson Number"
+  },
+  {
+   "fieldname": "book_page",
+   "fieldtype": "Data",
+   "label": "Book Page"
+  },
+  {
+   "fieldname": "homework",
+   "fieldtype": "Small Text",
+   "label": "Homework"
+  },
+  {
+   "fieldname": "participation",
+   "fieldtype": "Data",
+   "label": "Student Participation"
+  },
+  {
+   "fieldname": "assessment",
+   "fieldtype": "Data",
+   "label": "Assessment"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ]
+}

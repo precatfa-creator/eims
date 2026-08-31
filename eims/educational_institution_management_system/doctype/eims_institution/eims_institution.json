@@ -1,95 +1,111 @@
 {
-  "actions": [],
-  "autoname": "field:institution_name",
-  "creation": "2026-04-04 10:00:00.000000",
-  "default_view": "List",
-  "doctype": "DocType",
-  "engine": "InnoDB",
-  "field_order": [
-    "institution_name",
-    "short_name",
-    "city",
-    "country",
-    "address",
-    "phone",
-    "email",
-    "logo"
-  ],
-  "fields": [
-    {
-      "fieldname": "institution_name",
-      "fieldtype": "Data",
-      "in_list_view": 1,
-      "label": "Institution Name",
-      "reqd": 1,
-      "unique": 1
-    },
-    {
-      "fieldname": "short_name",
-      "fieldtype": "Data",
-      "label": "Short Name"
-    },
-    {
-      "fieldname": "city",
-      "fieldtype": "Data",
-      "label": "City"
-    },
-    {
-      "fieldname": "country",
-      "fieldtype": "Data",
-      "label": "Country",
-      "default": "ليبيا"
-    },
-    {
-      "fieldname": "address",
-      "fieldtype": "Small Text",
-      "label": "Address"
-    },
-    {
-      "fieldname": "phone",
-      "fieldtype": "Data",
-      "label": "Phone",
-      "options": "Phone"
-    },
-    {
-      "fieldname": "email",
-      "fieldtype": "Data",
-      "label": "Email",
-      "options": "Email"
-    },
-    {
-      "fieldname": "logo",
-      "fieldtype": "Attach Image",
-      "label": "Logo"
-    }
-  ],
-  "image_field": "logo",
-  "index_web_pages_for_search": 1,
-  "links": [],
-  "modified": "2026-04-04 10:00:00.000000",
-  "modified_by": "Administrator",
-  "module": "Educational Institution Management System",
-  "name": "EIMS Institution",
-  "naming_rule": "By fieldname",
-  "owner": "Administrator",
-  "permissions": [
-    {
-      "create": 1,
-      "read": 1,
-      "write": 1,
-      "delete": 1,
-      "role": "Academic Admin"
-    },
-    {
-      "read": 1,
-      "role": "Teacher"
-    },
-    {
-      "read": 1,
-      "role": "Student"
-    }
-  ],
-  "sort_field": "modified",
-  "sort_order": "DESC",
-  "states": []
+ "actions": [],
+ "autoname": "field:institution_name",
+ "creation": "2026-04-04 10:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "logo",
+  "institution_name",
+  "short_name",
+  "column_break_ins01",
+  "city",
+  "country",
+  "section_break_contact",
+  "phone",
+  "email",
+  "column_break_ins11",
+  "address"
+ ],
+ "fields": [
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo"
+  },
+  {
+   "fieldname": "institution_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Institution Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "short_name",
+   "fieldtype": "Data",
+   "label": "Short Name"
+  },
+  {
+   "fieldname": "column_break_ins01",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country",
+   "default": "ليبيا"
+  },
+  {
+   "fieldname": "section_break_contact",
+   "fieldtype": "Section Break",
+   "label": "Institution Contact"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "column_break_ins11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  }
+ ],
+ "image_field": "logo",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-04 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Institution",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "role": "Academic Admin"
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  },
+  {
+   "read": 1,
+   "role": "Student"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
 }

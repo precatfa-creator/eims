@@ -5,15 +5,16 @@
  "engine": "InnoDB",
  "field_order": [
   "log_date",
-  "academic_year",
-  "subject",
-  "stage",
   "section",
+  "stage",
   "teacher",
   "column_break_da1",
+  "academic_year",
+  "subject",
   "section_break_da2",
   "accomplishment",
   "homework",
+  "column_break_dai11",
   "notes",
   "section_break_lessons",
   "lessons"
@@ -30,7 +31,7 @@
   {
    "fieldname": "section",
    "fieldtype": "Link",
-   "label": "Section",
+   "label": "Class Section",
    "options": "EIMS Section",
    "in_standard_filter": 1
   },
@@ -51,8 +52,7 @@
   },
   {
    "fieldname": "column_break_da1",
-   "fieldtype": "Column Break",
-   "label": ""
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "academic_year",
@@ -70,7 +70,7 @@
   {
    "fieldname": "section_break_da2",
    "fieldtype": "Section Break",
-   "label": ""
+   "label": "Accomplishment Details"
   },
   {
    "fieldname": "accomplishment",
@@ -82,6 +82,10 @@
    "fieldname": "homework",
    "fieldtype": "Small Text",
    "label": "Homework"
+  },
+  {
+   "fieldname": "column_break_dai11",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "notes",
@@ -115,8 +119,8 @@
    "delete": 1,
    "read": 1,
    "write": 1,
-   "role": "System Manager"
-   ,"submit": 1
+   "role": "System Manager",
+   "submit": 1
   },
   {
    "create": 1,
@@ -124,8 +128,8 @@
    "delete": 1,
    "read": 1,
    "write": 1,
-   "role": "Academic Admin"
-   ,"submit": 1
+   "role": "Academic Admin",
+   "submit": 1
   },
   {
    "create": 1,

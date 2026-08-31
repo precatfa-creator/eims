@@ -9,6 +9,7 @@
   "subject_name",
   "subject_name_en",
   "stage",
+  "column_break_sub01",
   "subject_code",
   "subject_type"
  ],
@@ -35,6 +36,10 @@
    "label": "Stage",
    "options": "EIMS Stage",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_sub01",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "subject_code",

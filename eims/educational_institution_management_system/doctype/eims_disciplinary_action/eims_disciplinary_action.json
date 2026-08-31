@@ -15,11 +15,14 @@
   "status",
   "section_break_d2",
   "reason",
+  "column_break_dis11",
+  "notes",
+  "section_break_summons",
   "summons_date",
-  "suspension_from",
-  "suspension_to",
   "suspension_days",
-  "notes"
+  "column_break_dis21",
+  "suspension_from",
+  "suspension_to"
  ],
  "fields": [
   {
@@ -63,8 +66,7 @@
   },
   {
    "fieldname": "column_break_d1",
-   "fieldtype": "Column Break",
-   "label": ""
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "guardian_name",
@@ -96,14 +98,38 @@
   {
    "fieldname": "reason",
    "fieldtype": "Small Text",
-   "label": "Reason",
+   "label": "Action Reason",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_dis11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "section_break_summons",
+   "fieldtype": "Section Break",
+   "label": "Summons and Suspension"
   },
   {
    "fieldname": "summons_date",
    "fieldtype": "Date",
    "label": "Summons Date",
    "depends_on": "eval:doc.action_type=='استدعاء ولي أمر'"
+  },
+  {
+   "fieldname": "suspension_days",
+   "fieldtype": "Int",
+   "label": "Suspension Days",
+   "depends_on": "eval:doc.action_type=='إيقاف عن الدراسة'"
+  },
+  {
+   "fieldname": "column_break_dis21",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "suspension_from",
@@ -116,17 +142,6 @@
    "fieldtype": "Date",
    "label": "Suspension To",
    "depends_on": "eval:doc.action_type=='إيقاف عن الدراسة'"
-  },
-  {
-   "fieldname": "suspension_days",
-   "fieldtype": "Int",
-   "label": "Suspension Days",
-   "depends_on": "eval:doc.action_type=='إيقاف عن الدراسة'"
-  },
-  {
-   "fieldname": "notes",
-   "fieldtype": "Small Text",
-   "label": "Notes"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -144,8 +159,8 @@
    "delete": 1,
    "read": 1,
    "write": 1,
-   "role": "System Manager"
-   ,"submit": 1
+   "role": "System Manager",
+   "submit": 1
   },
   {
    "create": 1,
@@ -153,8 +168,8 @@
    "delete": 1,
    "read": 1,
    "write": 1,
-   "role": "Academic Admin"
-   ,"submit": 1
+   "role": "Academic Admin",
+   "submit": 1
   },
   {
    "read": 1,

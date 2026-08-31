@@ -48,7 +48,7 @@
   {
    "fieldname": "section",
    "fieldtype": "Link",
-   "label": "Section",
+   "label": "Class Section",
    "options": "EIMS Section",
    "in_list_view": 1,
    "columns": 2

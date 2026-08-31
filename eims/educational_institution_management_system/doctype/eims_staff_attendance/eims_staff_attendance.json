@@ -6,6 +6,7 @@
  "field_order": [
   "attendance_date",
   "academic_year",
+  "column_break_sta01",
   "notes",
   "section_break_sa1",
   "rows"
@@ -25,6 +26,10 @@
    "label": "Academic Year",
    "options": "EIMS Academic Year",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_sta01",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "notes",
@@ -58,8 +63,8 @@
    "delete": 1,
    "read": 1,
    "write": 1,
-   "role": "System Manager"
-   ,"submit": 1
+   "role": "System Manager",
+   "submit": 1
   },
   {
    "create": 1,
@@ -67,8 +72,8 @@
    "delete": 1,
    "read": 1,
    "write": 1,
-   "role": "Academic Admin"
-   ,"submit": 1
+   "role": "Academic Admin",
+   "submit": 1
   },
   {
    "read": 1,

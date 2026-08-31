@@ -9,14 +9,16 @@
   "national_id",
   "phone",
   "second_phone",
-  "occupation",
-  "education_level",
-  "workplace",
-  "preferred_contact_method",
   "column_break_g1",
   "email",
   "address",
+  "preferred_contact_method",
   "user_id",
+  "section_break_work",
+  "occupation",
+  "education_level",
+  "column_break_gua11",
+  "workplace",
   "section_break_children",
   "students"
  ],
@@ -51,30 +53,8 @@
    "label": "Second Phone"
   },
   {
-   "fieldname": "occupation",
-   "fieldtype": "Data",
-   "label": "Occupation"
-  },
-  {
-   "fieldname": "education_level",
-   "fieldtype": "Data",
-   "label": "Education Level"
-  },
-  {
-   "fieldname": "workplace",
-   "fieldtype": "Data",
-   "label": "Workplace"
-  },
-  {
-   "fieldname": "preferred_contact_method",
-   "fieldtype": "Select",
-   "label": "Preferred Contact Method",
-   "options": "Phone\nEmail\nSchool Diary\nOther"
-  },
-  {
    "fieldname": "column_break_g1",
-   "fieldtype": "Column Break",
-   "label": ""
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "email",
@@ -88,10 +68,40 @@
    "label": "Address"
   },
   {
+   "fieldname": "preferred_contact_method",
+   "fieldtype": "Select",
+   "label": "Preferred Contact Method",
+   "options": "هاتف\nبريد إلكتروني\nكراسة المتابعة\nأخرى"
+  },
+  {
    "fieldname": "user_id",
    "fieldtype": "Link",
    "label": "User Id",
    "options": "User"
+  },
+  {
+   "fieldname": "section_break_work",
+   "fieldtype": "Section Break",
+   "label": "Guardian Work and Education"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Data",
+   "label": "Occupation"
+  },
+  {
+   "fieldname": "education_level",
+   "fieldtype": "Data",
+   "label": "Education Level"
+  },
+  {
+   "fieldname": "column_break_gua11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "workplace",
+   "fieldtype": "Data",
+   "label": "Workplace"
   },
   {
    "fieldname": "section_break_children",

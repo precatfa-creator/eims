@@ -57,7 +57,7 @@
    "fieldname": "section",
    "fieldtype": "Link",
    "in_standard_filter": 1,
-   "label": "Section",
+   "label": "Class Section",
    "options": "EIMS Section",
    "read_only": 1
   },

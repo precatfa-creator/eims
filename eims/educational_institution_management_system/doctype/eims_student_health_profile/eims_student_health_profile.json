@@ -1,1 +1,84 @@
-{"autoname":"field:student","doctype":"DocType","module":"Educational Institution Management System","name":"EIMS Student Health Profile","field_order":["student","has_health_condition","health_condition","emergency_contact","emergency_phone","notes"],"fields":[{"fieldname":"student","fieldtype":"Link","label":"Student","options":"EIMS Student","reqd":1,"unique":1},{"fieldname":"has_health_condition","fieldtype":"Check","label":"Has Health Condition"},{"fieldname":"health_condition","fieldtype":"Small Text","label":"Health or Psychological Condition","depends_on":"has_health_condition"},{"fieldname":"emergency_contact","fieldtype":"Data","label":"Emergency Contact"},{"fieldname":"emergency_phone","fieldtype":"Data","label":"Emergency Phone","options":"Phone"},{"fieldname":"notes","fieldtype":"Small Text","label":"Confidential Notes"}],"permissions":[{"role":"System Manager","read":1,"write":1,"create":1,"delete":1},{"role":"Academic Admin","read":1,"write":1,"create":1}],"sort_field":"modified","sort_order":"DESC"}
+{
+ "autoname": "field:student",
+ "doctype": "DocType",
+ "module": "Educational Institution Management System",
+ "name": "EIMS Student Health Profile",
+ "field_order": [
+  "student",
+  "has_health_condition",
+  "column_break_stu01",
+  "emergency_contact",
+  "emergency_phone",
+  "section_break_health",
+  "health_condition",
+  "column_break_stu11",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "label": "Student",
+   "options": "EIMS Student",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "has_health_condition",
+   "fieldtype": "Check",
+   "label": "Has Health Condition"
+  },
+  {
+   "fieldname": "column_break_stu01",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "emergency_contact",
+   "fieldtype": "Data",
+   "label": "Emergency Contact"
+  },
+  {
+   "fieldname": "emergency_phone",
+   "fieldtype": "Data",
+   "label": "Emergency Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "section_break_health",
+   "fieldtype": "Section Break",
+   "label": "Health Details"
+  },
+  {
+   "fieldname": "health_condition",
+   "fieldtype": "Small Text",
+   "label": "Health or Psychological Condition",
+   "depends_on": "has_health_condition"
+  },
+  {
+   "fieldname": "column_break_stu11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Confidential Notes"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Academic Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -6,33 +6,43 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "tab_personal",
   "image",
   "student_name",
   "student_name_en",
   "enrollment_number",
+  "column_break_5",
   "date_of_birth",
   "place_of_birth",
   "gender",
   "nationality",
+  "tab_contact",
   "national_id",
   "passport_number",
-  "column_break_5",
   "phone",
-  "guardian",
-  "guardian_name",
-  "guardian_phone",
-  "guardian_user",
-  "parent_name",
-  "parent_phone",
-  "second_guardian_phone",
+  "column_break_stu11",
   "email",
   "address",
   "notes",
   "user_id",
+  "tab_guardian",
+  "parent_name",
+  "parent_phone",
+  "second_guardian_phone",
+  "column_break_stu21",
+  "guardian",
+  "guardian_name",
+  "guardian_phone",
+  "guardian_user",
   "section_break_history",
   "previous_records"
  ],
  "fields": [
+  {
+   "fieldname": "tab_personal",
+   "fieldtype": "Tab Break",
+   "label": "Personal Information"
+  },
   {
    "fieldname": "image",
    "fieldtype": "Attach Image",
@@ -58,6 +68,10 @@
    "label": "Enrollment Number",
    "reqd": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "date_of_birth",
@@ -86,6 +100,11 @@
    "options": "EIMS Nationality"
   },
   {
+   "fieldname": "tab_contact",
+   "fieldtype": "Tab Break",
+   "label": "Identity and Contact"
+  },
+  {
    "depends_on": "eval:doc.nationality=='ليبيا'",
    "fieldname": "national_id",
    "fieldtype": "Data",
@@ -99,59 +118,14 @@
    "label": "Passport Number"
   },
   {
-   "fieldname": "column_break_5",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "phone",
    "fieldtype": "Data",
    "label": "Phone",
    "options": "Phone"
   },
   {
-   "fieldname": "guardian",
-   "fieldtype": "Link",
-   "label": "Guardian Document",
-   "options": "EIMS Guardian"
-  },
-  {
-   "fieldname": "guardian_name",
-   "fieldtype": "Data",
-   "label": "Guardian Name",
-   "fetch_from": "guardian.guardian_name",
-   "read_only": 1
-  },
-  {
-   "fieldname": "guardian_phone",
-   "fieldtype": "Data",
-   "label": "Guardian Phone",
-   "fetch_from": "guardian.phone",
-   "read_only": 1
-  },
-  {
-   "fieldname": "guardian_user",
-   "fieldtype": "Link",
-   "label": "Guardian User",
-   "options": "User",
-   "fetch_from": "guardian.user_id",
-   "read_only": 1
-  },
-  {
-   "fieldname": "parent_name",
-   "fieldtype": "Data",
-   "label": "Guardian Name"
-  },
-  {
-   "fieldname": "parent_phone",
-   "fieldtype": "Data",
-   "label": "Guardian Phone",
-   "options": "Phone"
-  },
-  {
-   "fieldname": "second_guardian_phone",
-   "fieldtype": "Data",
-   "label": "Alternative Guardian Phone",
-   "options": "Phone"
+   "fieldname": "column_break_stu11",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "email",
@@ -176,8 +150,62 @@
    "options": "User"
   },
   {
+   "fieldname": "tab_guardian",
+   "fieldtype": "Tab Break",
+   "label": "Guardian Details"
+  },
+  {
+   "fieldname": "parent_name",
+   "fieldtype": "Data",
+   "label": "Guardian Name"
+  },
+  {
+   "fieldname": "parent_phone",
+   "fieldtype": "Data",
+   "label": "Guardian Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "second_guardian_phone",
+   "fieldtype": "Data",
+   "label": "Alternative Guardian Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_stu21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "guardian",
+   "fieldtype": "Link",
+   "label": "Guardian Document",
+   "options": "EIMS Guardian"
+  },
+  {
+   "fieldname": "guardian_name",
+   "fieldtype": "Data",
+   "label": "Guardian Name (from record)",
+   "fetch_from": "guardian.guardian_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "guardian_phone",
+   "fieldtype": "Data",
+   "label": "Guardian Phone (from record)",
+   "fetch_from": "guardian.phone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "guardian_user",
+   "fieldtype": "Link",
+   "label": "Guardian User",
+   "options": "User",
+   "fetch_from": "guardian.user_id",
+   "read_only": 1
+  },
+  {
    "fieldname": "section_break_history",
-   "fieldtype": "Section Break",
+   "fieldtype": "Tab Break",
    "label": "Previous Academic Record"
   },
   {

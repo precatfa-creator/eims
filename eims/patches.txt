@@ -6,3 +6,4 @@
 # Patches added in this section will be executed after doctypes are migrated
 eims.patches.v1_0.backfill_academic_year_context
 eims.patches.v1_0.backfill_enrollment_payment_lifecycle
+eims.patches.v1_0.arabise_select_values

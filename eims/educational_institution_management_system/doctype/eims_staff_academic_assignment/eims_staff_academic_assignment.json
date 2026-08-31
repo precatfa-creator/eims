@@ -9,11 +9,14 @@
   "staff",
   "staff_name",
   "academic_year",
+  "column_break_sta01",
   "role",
   "title",
   "status",
+  "section_break_period",
   "start_date",
   "end_date",
+  "column_break_sta11",
   "notes"
  ],
  "fields": [
@@ -44,6 +47,10 @@
    "reqd": 1
   },
   {
+   "fieldname": "column_break_sta01",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "role",
    "fieldtype": "Select",
    "in_list_view": 1,
@@ -66,6 +73,11 @@
    "options": "Active\nOn Leave\nInactive"
   },
   {
+   "fieldname": "section_break_period",
+   "fieldtype": "Section Break",
+   "label": "Assignment Period"
+  },
+  {
    "fieldname": "start_date",
    "fieldtype": "Date",
    "label": "Start Date"
@@ -74,6 +86,10 @@
    "fieldname": "end_date",
    "fieldtype": "Date",
    "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_sta11",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "notes",

@@ -9,15 +9,18 @@
   "student",
   "academic_year",
   "stage",
+  "column_break_enr01",
   "section",
   "status",
+  "enrollment_date",
+  "section_break_note",
   "enrollment_override_reason",
   "section_break_payment",
   "total_fee",
   "paid_amount",
+  "column_break_enr21",
   "outstanding_amount",
-  "payment_status",
-  "enrollment_date"
+  "payment_status"
  ],
  "fields": [
   {
@@ -48,11 +51,15 @@
    "reqd": 1
   },
   {
+   "fieldname": "column_break_enr01",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "section",
    "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Section",
+   "label": "Class Section",
    "options": "EIMS Section"
   },
   {
@@ -62,6 +69,16 @@
    "in_standard_filter": 1,
    "label": "Status",
    "options": "مسودة\nمسجل\nمنسحب\nمنقول\nمتخرج"
+  },
+  {
+   "fieldname": "enrollment_date",
+   "fieldtype": "Date",
+   "label": "Enrollment Date"
+  },
+  {
+   "fieldname": "section_break_note",
+   "fieldtype": "Section Break",
+   "label": "Enrollment Note"
   },
   {
    "fieldname": "enrollment_override_reason",
@@ -88,6 +105,10 @@
    "read_only": 1
   },
   {
+   "fieldname": "column_break_enr21",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "outstanding_amount",
    "fieldtype": "Currency",
    "label": "Outstanding Amount",
@@ -100,11 +121,6 @@
    "options": "غير مدفوع\nمدفوع جزئياً\nمدفوع بالكامل",
    "read_only": 1,
    "in_list_view": 1
-  },
-  {
-   "fieldname": "enrollment_date",
-   "fieldtype": "Date",
-   "label": "Enrollment Date"
   }
  ],
  "index_web_pages_for_search": 1,

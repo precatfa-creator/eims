@@ -25,7 +25,7 @@
   {
    "fieldname": "subject",
    "fieldtype": "Data",
-   "label": "Subject",
+   "label": "Request Subject",
    "reqd": 1,
    "in_list_view": 1
   },
@@ -82,8 +82,7 @@
   },
   {
    "fieldname": "column_break_r1",
-   "fieldtype": "Column Break",
-   "label": ""
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "status",
@@ -110,7 +109,7 @@
   {
    "fieldname": "section_break_r2",
    "fieldtype": "Section Break",
-   "label": "Section Break R2"
+   "label": "Request Details"
   },
   {
    "fieldname": "description",
@@ -121,7 +120,7 @@
   {
    "fieldname": "section_break_r3",
    "fieldtype": "Section Break",
-   "label": "Section Break R3"
+   "label": "Request Replies"
   },
   {
    "fieldname": "replies",

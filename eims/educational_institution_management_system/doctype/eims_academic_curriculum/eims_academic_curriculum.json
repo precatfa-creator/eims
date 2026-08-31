@@ -9,10 +9,13 @@
   "academic_year",
   "stage",
   "subject",
+  "column_break_aca01",
   "subject_name",
   "is_active",
+  "section_break_period",
   "start_date",
   "end_date",
+  "column_break_aca11",
   "notes"
  ],
  "fields": [
@@ -46,6 +49,10 @@
    "reqd": 1
   },
   {
+   "fieldname": "column_break_aca01",
+   "fieldtype": "Column Break"
+  },
+  {
    "fetch_from": "subject.subject_name",
    "fieldname": "subject_name",
    "fieldtype": "Data",
@@ -61,6 +68,11 @@
    "label": "Active"
   },
   {
+   "fieldname": "section_break_period",
+   "fieldtype": "Section Break",
+   "label": "Curriculum Validity Period"
+  },
+  {
    "fieldname": "start_date",
    "fieldtype": "Date",
    "label": "Start Date"
@@ -69,6 +81,10 @@
    "fieldname": "end_date",
    "fieldtype": "Date",
    "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_aca11",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "notes",
