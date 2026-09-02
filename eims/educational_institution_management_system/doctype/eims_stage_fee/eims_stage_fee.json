@@ -9,6 +9,7 @@
  "field_order": [
   "stage",
   "academic_year",
+  "column_break_sta01",
   "amount"
  ],
  "fields": [
@@ -29,6 +30,10 @@
    "label": "Academic Year",
    "options": "EIMS Academic Year",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_sta01",
+   "fieldtype": "Column Break"
   },
   {
    "default": "0",

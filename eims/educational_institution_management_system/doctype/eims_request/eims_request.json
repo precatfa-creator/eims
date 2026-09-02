@@ -39,7 +39,7 @@
   {
    "fieldname": "subject",
    "fieldtype": "Data",
-   "label": "Subject",
+   "label": "Request Subject",
    "reqd": 1,
    "in_list_view": 1
   },

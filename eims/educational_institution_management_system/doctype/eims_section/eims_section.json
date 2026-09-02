@@ -25,7 +25,7 @@
    "fieldname": "name_ar",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Name (AR)",
+   "label": "Section Name (AR)",
    "reqd": 1
   },
   {

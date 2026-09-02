@@ -28,7 +28,7 @@
    "fieldname": "title",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Title",
+   "label": "Timetable Title",
    "reqd": 1
   },
   {
@@ -58,7 +58,7 @@
   {
    "fieldname": "section",
    "fieldtype": "Link",
-   "label": "Section",
+   "label": "Class Section",
    "options": "EIMS Section"
   },
   {

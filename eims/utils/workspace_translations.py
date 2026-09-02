@@ -50,7 +50,7 @@ EIMS_ARABIC_TRANSLATIONS = {
 	"Status": "الحالة",
 	"Start Date": "تاريخ البداية",
 	"End Date": "تاريخ النهاية",
-	"Notes": "ملاحظات",
+	"Notes": "الملاحظات",
 	"Active": "نشط",
 	"On Leave": "في إجازة",
 	"Inactive": "غير نشط",

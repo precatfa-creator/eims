@@ -180,14 +180,14 @@
    "fetch_from": "guardian.guardian_name",
    "fieldname": "guardian_name",
    "fieldtype": "Data",
-   "label": "Guardian Name",
+   "label": "Guardian Name (from record)",
    "read_only": 1
   },
   {
    "fetch_from": "guardian.phone",
    "fieldname": "guardian_phone",
    "fieldtype": "Data",
-   "label": "Guardian Phone",
+   "label": "Guardian Phone (from record)",
    "read_only": 1
   },
   {

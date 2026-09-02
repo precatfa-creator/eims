@@ -117,7 +117,7 @@
   {
    "fieldname": "reason",
    "fieldtype": "Small Text",
-   "label": "Reason",
+   "label": "Action Reason",
    "reqd": 1
   },
   {
