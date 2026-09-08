@@ -1,5 +1,6 @@
 {
  "doc_type": "EIMS Enrollment",
+ "default_print_language": "ar",
  "disabled": 0,
  "doctype": "Print Format",
  "html": "<div style=\"direction:rtl;text-align:right;font-family:Tahoma\">{% set school = frappe.get_all('EIMS Institution', fields=['institution_name'], limit=1) %}{% set student = frappe.get_doc('EIMS Student', doc.student) %}<h2 style=\"text-align:center\">{{ school[0].institution_name if school else '' }}</h2><h3 style=\"text-align:center\">نموذج تسجيل / تجديد قيد طالب</h3><p>اسم الطالب: {{ student.student_name }} | رقم القيد: {{ student.enrollment_number }}</p><p>تاريخ الميلاد: {{ student.date_of_birth or '' }} | الجنسية: {{ student.nationality or '' }} | الهاتف: {{ student.phone or '' }}</p><p>ولي الأمر: {{ student.guardian_name or student.parent_name or '' }} | هاتف ولي الأمر: {{ student.guardian_phone or student.parent_phone or '' }}</p><hr><p>السنة الدراسية: {{ doc.academic_year }} | المرحلة: {{ doc.stage }} | الفصل: {{ doc.section }} | تاريخ التسجيل: {{ doc.enrollment_date }}</p><p>حالة التسجيل: {{ doc.status }} | حالة السداد: {{ doc.payment_status }} | إجمالي الرسوم: {{ doc.total_fee }} | المدفوع: {{ doc.paid_amount }} | المتبقي: {{ doc.outstanding_amount }}</p><br><p>توقيع ولي الأمر: ____________________</p><p>اعتماد الإدارة: ____________________</p></div>",

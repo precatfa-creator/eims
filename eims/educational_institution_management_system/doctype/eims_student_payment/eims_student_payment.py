@@ -63,6 +63,20 @@ class EIMSStudentPayment(Document):
 			self.installment_no, money(self.amount_paid)
 		)
 
+	def amount_in_words(self):
+		"""The paid amount spelled out in Arabic, the way it is written on the paper receipt."""
+		from num2words import num2words
+
+		# ponytail: Libyan dinar, 1000 dirhams. Read Currency.fraction_units if a second
+		# currency ever shows up.
+		amount = flt(self.amount_paid)
+		dinars = int(amount)
+		dirhams = round((amount - dinars) * 1000)
+		words = f"{num2words(dinars, lang='ar')} دينار"
+		if dirhams:
+			words += f" و {num2words(dirhams, lang='ar')} درهم"
+		return f"{words} فقط"
+
 	def on_submit(self):
 		refresh_enrollment_payment_status(self.enrollment)
 

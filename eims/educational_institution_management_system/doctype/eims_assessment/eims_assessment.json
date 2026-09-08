@@ -2,6 +2,7 @@
  "actions": [],
  "autoname": "format:ASMT-{subject}-{term}-{#####}",
  "creation": "2026-06-27 12:00:00",
+ "default_print_format": "EIMS Assessment Grade Sheet",
  "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",

@@ -55,6 +55,7 @@
   {
    "fieldname": "subject",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Subject",
    "options": "EIMS Subject"
   },
@@ -73,7 +74,7 @@
   {
    "fieldname": "teacher",
    "fieldtype": "Link",
-   "in_standard_filter": 1,
+   "hidden": 1,
    "label": "Teacher",
    "options": "EIMS Staff"
   },
@@ -107,7 +108,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-08-12 03:18:18.452866",
+ "modified": "2026-09-07 10:00:00.000000",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Student Attendance",

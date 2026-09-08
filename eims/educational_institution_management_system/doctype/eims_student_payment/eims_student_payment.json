@@ -2,6 +2,7 @@
  "actions": [],
  "autoname": "format:PAY-{#####}",
  "creation": "2026-06-16 10:00:00",
+ "default_print_format": "EIMS Student Payment Receipt",
  "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",

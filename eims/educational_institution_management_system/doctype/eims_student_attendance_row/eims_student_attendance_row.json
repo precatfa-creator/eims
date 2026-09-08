@@ -30,12 +30,11 @@
   },
   {
    "columns": 2,
-   "default": "\u062d\u0627\u0636\u0631",
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "\u062d\u0627\u0636\u0631\n\u063a\u0627\u0626\u0628\n\u0645\u062a\u0623\u062e\u0631\n\u0645\u0623\u0630\u0648\u0646"
+   "options": "\n\u062d\u0627\u0636\u0631\n\u063a\u0627\u0626\u0628\n\u0645\u062a\u0623\u062e\u0631\n\u0645\u0623\u0630\u0648\u0646"
   },
   {
    "fieldname": "notes",
@@ -46,7 +45,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-08-12 03:18:18.879092",
+ "modified": "2026-09-07 10:00:00.000000",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Student Attendance Row",

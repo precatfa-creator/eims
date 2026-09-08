@@ -3,6 +3,7 @@
  "allow_import": 1,
  "autoname": "format:{student}-{academic_year}",
  "creation": "2026-06-16 12:00:00",
+ "default_print_format": "EIMS Enrollment Form",
  "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -159,6 +160,7 @@
   {
    "create": 1,
    "delete": 1,
+   "export": 1,
    "read": 1,
    "role": "System Manager",
    "write": 1
@@ -166,6 +168,7 @@
   {
    "create": 1,
    "delete": 1,
+   "export": 1,
    "read": 1,
    "role": "Academic Admin",
    "write": 1

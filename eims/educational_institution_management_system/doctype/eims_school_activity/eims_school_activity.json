@@ -2,6 +2,7 @@
  "actions": [],
  "autoname": "format:ACT-{#####}",
  "creation": "2026-06-27 12:00:00",
+ "default_print_format": "EIMS Activity Consent",
  "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",

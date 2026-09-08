@@ -1,5 +1,6 @@
 {
  "doc_type": "EIMS Daily Accomplishment",
+ "default_print_language": "ar",
  "disabled": 0,
  "doctype": "Print Format",
  "html": "<div style=\"direction:rtl;text-align:right;font-family:Tahoma\">{% set school = frappe.get_all('EIMS Institution', fields=['institution_name'], limit=1) %}<h2 style=\"text-align:center\">{{ school[0].institution_name if school else '' }}</h2><h3 style=\"text-align:center\">نموذج الإنجاز اليومي</h3><p>التاريخ: {{ doc.log_date }} | المعلم: {{ frappe.db.get_value('EIMS Staff', doc.teacher, 'name_ar') or doc.teacher }} | المادة: {{ doc.subject }}</p><p>المرحلة: {{ doc.stage }} | الفصل: {{ doc.section }} | السنة الدراسية: {{ doc.academic_year }}</p><hr><h4>الإنجاز</h4><p style=\"white-space:pre-wrap\">{{ doc.accomplishment or '' }}</p><h4>الواجب المنزلي</h4><p style=\"white-space:pre-wrap\">{{ doc.homework or '' }}</p><h4>ملاحظات</h4><p style=\"white-space:pre-wrap\">{{ doc.notes or '' }}</p></div>",
