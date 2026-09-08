@@ -9,3 +9,4 @@ eims.patches.v1_0.backfill_enrollment_payment_lifecycle
 eims.patches.v1_0.backfill_payment_balance_snapshot
 eims.patches.v1_0.backfill_payment_balance_snapshot #2026-08-12 fill payment history
 eims.patches.v1_0.arabise_select_values
+eims.patches.v1_0.rename_sections_to_arabic

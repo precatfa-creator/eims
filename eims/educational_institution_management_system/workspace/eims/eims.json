@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"hdr\",\"type\":\"header\",\"data\":{\"text\":\"<b>\ud83c\udf93 Suhool Al-Ilm School Management System</b>\",\"col\":12}},{\"id\":\"sc1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Open School System\",\"col\":3}},{\"id\":\"sc2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Add Student\",\"col\":3}},{\"id\":\"sc3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Assessment\",\"col\":3}},{\"id\":\"sc4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Take Attendance\",\"col\":3}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"c1\",\"type\":\"card\",\"data\":{\"card_name\":\"\ud83d\udc65 Students and Enrollment\",\"col\":4}},{\"id\":\"c2\",\"type\":\"card\",\"data\":{\"card_name\":\"\ud83d\udcda Academic Operations\",\"col\":4}},{\"id\":\"c3\",\"type\":\"card\",\"data\":{\"card_name\":\"\ud83e\uddd1\u200d\ud83c\udfeb People and Communication\",\"col\":4}},{\"id\":\"c4\",\"type\":\"card\",\"data\":{\"card_name\":\"\ud83c\udf31 Student Welfare and Activities\",\"col\":4}},{\"id\":\"c5\",\"type\":\"card\",\"data\":{\"card_name\":\"\ud83c\udfdb\ufe0f Academic Structure\",\"col\":4}},{\"id\":\"c6\",\"type\":\"card\",\"data\":{\"card_name\":\"\u2699\ufe0f Administration and Finance\",\"col\":4}},{\"id\":\"student-welfare-and-\",\"type\":\"card\",\"data\":{\"card_name\":\"Student Welfare and Records\",\"col\":4}},{\"id\":\"school-operations-an\",\"type\":\"card\",\"data\":{\"card_name\":\"School Operations and Correspondence\",\"col\":4}}]",
+ "content": "[{\"id\":\"hdr\",\"type\":\"header\",\"data\":{\"text\":\"<b>\ud83c\udf93 Suhool Al-Ilm School Management System</b>\",\"col\":12}},{\"id\":\"sc1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Open School System\",\"col\":3}},{\"id\":\"sc2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Add Student\",\"col\":3}},{\"id\":\"sc3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Assessment\",\"col\":3}},{\"id\":\"sc4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Take Attendance\",\"col\":3}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"card1\",\"type\":\"card\",\"data\":{\"card_name\":\"\ud83d\udc65 Students and Enrollment\",\"col\":4}},{\"id\":\"card2\",\"type\":\"card\",\"data\":{\"card_name\":\"\ud83d\udcda Academic Operations\",\"col\":4}},{\"id\":\"card3\",\"type\":\"card\",\"data\":{\"card_name\":\"\ud83d\udcca Reports\",\"col\":4}},{\"id\":\"card4\",\"type\":\"card\",\"data\":{\"card_name\":\"\ud83e\uddd1\u200d\ud83c\udfeb People and Communication\",\"col\":4}},{\"id\":\"card5\",\"type\":\"card\",\"data\":{\"card_name\":\"\ud83c\udf31 Student Welfare and Activities\",\"col\":4}},{\"id\":\"card6\",\"type\":\"card\",\"data\":{\"card_name\":\"\ud83d\udce3 School Operations and Correspondence\",\"col\":4}},{\"id\":\"card7\",\"type\":\"card\",\"data\":{\"card_name\":\"\ud83c\udfdb\ufe0f Academic Structure\",\"col\":4}},{\"id\":\"card8\",\"type\":\"card\",\"data\":{\"card_name\":\"\u2699\ufe0f Administration and Finance\",\"col\":4}}]",
  "creation": "2026-08-10 03:40:28.724112",
  "custom_blocks": [],
  "docstatus": 0,
@@ -130,6 +130,80 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "\ud83d\udcca Reports",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "icon": "list",
+   "is_query_report": 1,
+   "label": "Student Register",
+   "link_count": 0,
+   "link_to": "Student Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "calendar",
+   "is_query_report": 1,
+   "label": "Student Attendance Summary",
+   "link_count": 0,
+   "link_to": "Student Attendance Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "review",
+   "is_query_report": 1,
+   "label": "Student Report Card",
+   "link_count": 0,
+   "link_to": "Student Report Card",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "chart",
+   "is_query_report": 1,
+   "label": "Class Performance Report",
+   "link_count": 0,
+   "link_to": "Class Performance Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "small-file",
+   "is_query_report": 1,
+   "label": "Subject Wise Analysis",
+   "link_count": 0,
+   "link_to": "Subject Wise Analysis",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "users",
+   "is_query_report": 1,
+   "label": "Teacher Grade Summary",
+   "link_count": 0,
+   "link_to": "Teacher Grade Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "\ud83e\uddd1\u200d\ud83c\udfeb People and Communication",
    "link_count": 0,
    "onboard": 0,
@@ -233,6 +307,69 @@
   },
   {
    "hidden": 0,
+   "icon": "heart",
+   "is_query_report": 0,
+   "label": "Student Health Profiles",
+   "link_count": 0,
+   "link_to": "EIMS Student Health Profile",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "event",
+   "is_query_report": 0,
+   "label": "Activity Consents",
+   "link_count": 0,
+   "link_to": "EIMS Activity Consent",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "\ud83d\udce3 School Operations and Correspondence",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "icon": "announcement",
+   "is_query_report": 0,
+   "label": "Announcements & News",
+   "link_count": 0,
+   "link_to": "EIMS Announcement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "calendar",
+   "is_query_report": 0,
+   "label": "Morning Assemblies",
+   "link_count": 0,
+   "link_to": "EIMS Morning Assembly",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "mail",
+   "is_query_report": 0,
+   "label": "Official Correspondence",
+   "link_count": 0,
+   "link_to": "EIMS Official Correspondence",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
    "is_query_report": 0,
    "label": "\ud83c\udfdb\ufe0f Academic Structure",
    "link_count": 0,
@@ -323,80 +460,9 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Student Welfare and Records",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "icon": "heart",
-   "is_query_report": 0,
-   "label": "Student Health Profiles",
-   "link_count": 0,
-   "link_to": "EIMS Student Health Profile",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "icon": "event",
-   "is_query_report": 0,
-   "label": "Activity Consents",
-   "link_count": 0,
-   "link_to": "EIMS Activity Consent",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "School Operations and Correspondence",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "icon": "announcement",
-   "is_query_report": 0,
-   "label": "Announcements & News",
-   "link_count": 0,
-   "link_to": "EIMS Announcement",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "icon": "calendar",
-   "is_query_report": 0,
-   "label": "Morning Assemblies",
-   "link_count": 0,
-   "link_to": "EIMS Morning Assembly",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "icon": "mail",
-   "is_query_report": 0,
-   "label": "Official Correspondence",
-   "link_count": 0,
-   "link_to": "EIMS Official Correspondence",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
   }
  ],
- "modified": "2026-08-10 04:30:00",
+ "modified": "2026-09-08 12:00:00",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS",

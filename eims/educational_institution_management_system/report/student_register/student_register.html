@@ -1,0 +1,112 @@
+<style>
+	.student-register { direction: rtl; font-size: 10px; color: #222; }
+	.student-register header { text-align: center; margin-bottom: 14px; }
+	.student-register header img { display: block; margin: 0 auto 8px; max-height: 85px; max-width: 160px; object-fit: contain; }
+	.student-register h2 { margin: 6px 0; font-size: 20px; }
+	.student-register h3 { margin: 6px 0; font-size: 15px; }
+	.student-register table { width: 100%; border-collapse: collapse; table-layout: fixed; margin-bottom: 12px; }
+	.student-register th, .student-register td { border: 1px solid #aaa; padding: 6px; text-align: right; overflow-wrap: anywhere; }
+	.student-register th { background: #eee !important; font-weight: bold; }
+	.student-register thead { display: table-header-group; }
+	.student-register tr { break-inside: avoid; page-break-inside: avoid; }
+	.student-register .student-card { break-inside: avoid; page-break-inside: avoid; margin-bottom: 16px; }
+	.student-register .roster-logo { display: block; margin: 0 auto; max-height: 70px; max-width: 140px; object-fit: contain; }
+	.student-register .roster-group + .roster-group { page-break-before: always; }
+	.student-register .roster-title { text-align: center; font-size: 15px; font-weight: bold; margin: 4px 0 10px; }
+	.student-register .roster-meta { display: flex; justify-content: space-between; font-size: 12px; font-weight: bold; margin-bottom: 4px; }
+	.student-register table.roster { font-size: 12px; }
+	.student-register table.roster th, .student-register table.roster td { height: 26px; padding: 4px 6px; }
+	.student-register table.roster .c-num { width: 34px; text-align: center; }
+	.student-register table.roster .c-notes { width: 45%; }
+	.student-register footer { margin-top: 18px; border-top: 1px solid #aaa; padding-top: 8px; text-align: center; font-size: 10px; }
+</style>
+{% var branding = report.school_branding || {}; %}
+{% var escape = frappe.utils.escape_html; %}
+<div class="student-register">
+	{% if (filters.view !== 'Roster') { %}
+	<header>
+		<img src="{%= escape(branding.logo || '/assets/eims/website/school-logo.webp') %}" alt="شعار المدرسة">
+		{% if (branding.institution_name) { %}<h3>{%= escape(branding.institution_name) %}</h3>{% } %}
+		<h2>سجل الطلبة</h2>
+		<div>العام الدراسي: {%= escape(filters.academic_year || '') %}</div>
+	</header>
+	{% if (subtitle) { %}<div>{%= subtitle %}</div>{% } %}
+	<p>عدد السجلات: {%= data.length %}</p>
+	{% } %}
+	{% if (filters.view === 'Roster') { %}
+		{% /* The handwritten class sheet: one page per section, names printed, the rest left blank. */ %}
+		{% var groups = []; %}
+		{% for (var i = 0; i < data.length; i++) { %}
+			{% var key = data[i].section || data[i].stage || ''; %}
+			{% var label = [data[i].stage, data[i].section_label].filter(Boolean).join(' - ') || key; %}
+			{% if (!groups.length || groups[groups.length - 1].key !== key) { groups.push({ key: key, label: label, rows: [] }); } %}
+			{% groups[groups.length - 1].rows.push(data[i]); %}
+		{% } %}
+		{% for (var g = 0; g < groups.length; g++) { %}
+			<div class="roster-group">
+				<img class="roster-logo" src="{%= escape(branding.logo || '/assets/eims/website/school-logo.webp') %}" alt="شعار المدرسة">
+				<div class="roster-title">
+					{%= escape(branding.institution_name || '') %} {%= escape(filters.academic_year || '') %} م
+				</div>
+				<div class="roster-meta">
+					<span>{%= escape(groups[g].label) %}</span>
+					<span>عدد التلاميذ = {%= groups[g].rows.length %}</span>
+				</div>
+				<table class="roster">
+					<thead><tr>
+						<th class="c-num">م</th>
+						<th>اسم التلميذ</th>
+						<th class="c-notes">ملاحظات</th>
+					</tr></thead>
+					<tbody>
+					{% for (var i = 0; i < groups[g].rows.length; i++) { %}
+						<tr>
+							<td class="c-num">{%= i + 1 %}</td>
+							<td>{%= escape(groups[g].rows[i].student_name || '') %}</td>
+							<td></td>
+						</tr>
+					{% } %}
+					</tbody>
+				</table>
+			</div>
+		{% } %}
+	{% } else if (filters.view === 'Full Details') { %}
+		{% for (var i = 0; i < data.length; i++) { %}
+			<div class="student-card">
+				<h3>{%= i + 1 %}. {%= escape(data[i].student_name || '') %}</h3>
+				<table><tbody>
+				{% for (var j = 0; j < columns.length; j += 2) { %}
+					<tr>
+					{% for (var k = j; k < Math.min(j + 2, columns.length); k++) { %}
+						<th>{%= escape(columns[k].label || columns[k].name) %}</th>
+						<td>{%= escape(String(data[i][columns[k].fieldname] ?? '')) %}</td>
+					{% } %}
+					</tr>
+				{% } %}
+				</tbody></table>
+			</div>
+		{% } %}
+	{% } else { %}
+		<table>
+			<thead><tr><th style="width: 30px">#</th>
+			{% for (var j = 0; j < columns.length; j++) { %}
+				<th>{%= escape(columns[j].label || columns[j].name) %}</th>
+			{% } %}
+			</tr></thead>
+			<tbody>
+			{% for (var i = 0; i < data.length; i++) { %}
+				<tr><td>{%= i + 1 %}</td>
+				{% for (var j = 0; j < columns.length; j++) { %}
+					<td>{%= escape(String(data[i][columns[j].fieldname] ?? '')) %}</td>
+				{% } %}
+				</tr>
+			{% } %}
+			</tbody>
+		</table>
+	{% } %}
+	<footer>
+		تاريخ الطباعة / التصدير:
+		{%= moment().tz(frappe.boot.time_zone.system).format('YYYY-MM-DD HH:mm:ss') %}
+		({%= escape(frappe.boot.time_zone.system) %})
+	</footer>
+</div>

@@ -1,13 +1,14 @@
 {
  "actions": [],
  "allow_import": 1,
- "autoname": "format:{stage}-{name_en}",
+ "autoname": "format:{stage}-{name_ar}",
  "creation": "2026-06-16 10:00:00",
  "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "stage",
+  "column_break_yeak",
   "name_ar",
   "name_en"
  ],
@@ -32,17 +33,20 @@
    "fieldname": "name_en",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Name (EN)",
-   "reqd": 1
+   "label": "Name (EN)"
+  },
+  {
+   "fieldname": "column_break_yeak",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-12 03:46:36.275267",
+ "modified": "2026-09-07 12:16:16.315806",
  "modified_by": "Administrator",
  "module": "Educational Institution Management System",
  "name": "EIMS Section",
- "naming_rule": "Expression",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
