@@ -470,9 +470,15 @@ def _assert_can_attend(section, year):
 
 
 def _find_attendance(section, date, year):
+	"""The section's monthly sheet holding `date`."""
 	found = frappe.get_all(
 		"EIMS Student Attendance",
-		filters={"section": section, "attendance_date": date, "academic_year": year},
+		filters={
+			"section": section,
+			"attendance_date": frappe.utils.get_first_day(date),
+			"academic_year": year,
+			"docstatus": ["<", 2],
+		},
 		pluck="name",
 		limit=1,
 	)
@@ -495,7 +501,10 @@ def get_attendance_sheet(section, date, year):
 	saved = {}
 	name = _find_attendance(section, date, year)
 	if name:
+		day = frappe.utils.getdate(date)
 		for r in frappe.get_doc("EIMS Student Attendance", name).rows:
+			if frappe.utils.getdate(r.date) != day:
+				continue
 			saved[r.student] = r.status
 			roster.add(r.student)
 
@@ -503,7 +512,7 @@ def get_attendance_sheet(section, date, year):
 		{
 			"student": sid,
 			"studentName": frappe.db.get_value("EIMS Student", sid, "student_name"),
-			"status": saved.get(sid, "حاضر"),
+			"status": saved.get(sid) or "حاضر",
 		}
 		for sid in roster
 	]
@@ -513,11 +522,13 @@ def get_attendance_sheet(section, date, year):
 
 @frappe.whitelist()
 def save_attendance(section, date, year, rows, stage=None, subject=None):
-	"""Create/update the day's EIMS Student Attendance for a class."""
+	"""Record one day of a class into its monthly EIMS Student Attendance."""
 	_assert_can_attend(section, year)
 	rows = frappe.parse_json(rows)
 
 	name = _find_attendance(section, date, year)
+	if name and frappe.db.get_value("EIMS Student Attendance", name, "docstatus") == 1:
+		frappe.throw("كشف حضور هذا الشهر مُعتمد؛ يلزم إلغاء الاعتماد قبل تسجيل أيام أخرى.")
 	if name:
 		doc = frappe.get_doc("EIMS Student Attendance", name)
 	else:
@@ -526,14 +537,18 @@ def save_attendance(section, date, year, rows, stage=None, subject=None):
 		doc.stage = stage or None
 		doc.teacher = _my_staff()
 	doc.subject = subject or None
-	doc.set("rows", [])
+	day = frappe.utils.getdate(date)
+	# The sheet holds the whole month: replace this day's rows, keep the others.
+	doc.set("rows", [r for r in doc.rows if frappe.utils.getdate(r.date) != day])
+	count = 0
 	for r in rows:
 		if not r.get("student"):
 			continue
-		doc.append("rows", {"student": r["student"], "status": r.get("status") or "حاضر"})
+		doc.append("rows", {"date": day, "student": r["student"], "status": r.get("status") or "حاضر"})
+		count += 1
 	doc.save(ignore_permissions=True)
 	frappe.db.commit()
-	return {"attendance": doc.name, "count": len(doc.rows)}
+	return {"attendance": doc.name, "count": count}
 
 
 @frappe.whitelist()

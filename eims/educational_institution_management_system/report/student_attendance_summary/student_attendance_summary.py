@@ -57,8 +57,8 @@ def get_roster(filters):
 
 
 def get_counts(filters):
-	"""{student: {status: count}} over submitted sheets in the date range."""
-	conditions = ["att.attendance_date between %(from_date)s and %(to_date)s"]
+	"""{student: {status: count}} over the days of submitted sheets in the date range."""
+	conditions = ["row.date between %(from_date)s and %(to_date)s"]
 	params = {
 		"academic_year": filters.academic_year,
 		"from_date": filters.from_date,
